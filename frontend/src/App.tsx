@@ -1,10 +1,12 @@
+import { Sidebar } from "./Sidebar/Sidebar"
 
-function App() {
+const App = () => {
+
 
   return (
-    <>
-      <div className="bg-red-500">Test</div>
-    </>
+    <div className="overflow-hidden w-screen h-screen relative flex z-0">
+      <Sidebar/>
+    </div>
   )
 }
 
