@@ -1,5 +1,23 @@
+import { useState, useEffect } from "react";
 
 export const Maincontent = () => {
+  const [text,setText] = useState("");
+  const message = "Where can I find a good developer?";
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setText((prevText) => {
+        // If all characters have been added, stop the interval
+        if (prevText.length === message.length) {
+          clearInterval(timer);
+          return prevText;
+        }
+        // Add the next character from the message
+        return prevText + message.charAt(prevText.length);
+      });
+    }, 50); // adjust the speed of typing here
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="flex flex-grow overflow-x-hidden bg-[#373b46]">
       <div className="flex h-full max-w-full flex-1 flex-col">
@@ -49,7 +67,7 @@ export const Maincontent = () => {
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl" action="">
             <div className="relative flex h-full flex-1 items-stretch md:flex-col">
               <div className="flex flex-row bg-[#2d3444] w-[650px] h-[50px] rounded-lg">
-                <input className="w-full bg-[#2d3444] rounded-lg h-full placeholder:pl-4" placeholder="Send Message">
+                <input value={text} className="w-full bg-[#2d3444] rounded-lg h-full placeholder:pl-4 pl-4" placeholder="Send Message">
                 </input>
                 <button className=" p-1 rounded-md md:bottom-3 md:p-2 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 disabled:text-gray-400 enabled:bg-brand-purple text-white bottom-1.5 transition-colors disabled:opacity-40">
                   <span>
