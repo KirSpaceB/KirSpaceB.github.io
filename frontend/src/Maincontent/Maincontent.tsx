@@ -48,9 +48,9 @@ export const Maincontent = () => {
           </div>
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl" action="">
             <div className="relative flex h-full flex-1 items-stretch md:flex-col">
-              <div className="flex flex-row bg-gray-700 w-[650px] rounded-lg">
-                <textarea className="m-0 w-full resize-none border-0 bg-transparent p-0 pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:pr-12 pl-3 md:pl-0">
-                </textarea>
+              <div className="flex flex-row bg-gray-700 w-[650px] h-[50px] rounded-lg">
+                <input className="w-full bg-gray-700 rounded-lg h-full placeholder:pl-4" placeholder="Send Message">
+                </input>
                 <button className=" p-1 rounded-md md:bottom-3 md:p-2 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 disabled:text-gray-400 enabled:bg-brand-purple text-white bottom-1.5 transition-colors disabled:opacity-40">
                   <span>
                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 16 16" stroke-linecap="round" stroke-linejoin="round" className="h-4 w-4 transition-colors text-brand-green" height="16" width="16" xmlns="http://www.w3.org/2000/svg">

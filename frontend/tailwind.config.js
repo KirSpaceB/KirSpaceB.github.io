@@ -16,5 +16,33 @@ export default {
       backgroundColor: ['group-hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.placeholder-pl-1': {
+          '::placeholder': {
+            paddingLeft: '0.25rem',
+          },
+        },
+        '.placeholder-pl-2': {
+          '::placeholder': {
+            paddingLeft: '0.5rem',
+          },
+        },
+        '.placeholder-pl-3': {
+          '::placeholder': {
+            paddingLeft: '0.75rem',
+          },
+        },
+        '.placeholder-pl-4': {
+          '::placeholder': {
+            paddingLeft: '1rem',
+          },
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
+  ],
 }
