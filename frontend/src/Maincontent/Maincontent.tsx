@@ -30,7 +30,7 @@ export const Maincontent = () => {
   return (
     <div className="flex flex-grow bg-[#373b46]">
       <div className="flex h-full max-w-full flex-1 flex-col">
-        <main className="relative h-full w-full transition-width flex flex-col overflow-auto items-stretch flex-1">
+        <main className="relative h-full w-full transition-width flex flex-col overflow-y-auto items-stretch flex-1">
           <div className="flex-1">
             <div className="px-2 relative w-full flex flex-col h-full py-2 md:py-6">
               <div className="relative flex flex-col items-stretch justify-center gap-2 sm:items-center">
