@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Answer } from "../Answer/Answer";
 
 export const Maincontent = () => {
   const [text,setText] = useState("");
@@ -20,7 +21,6 @@ export const Maincontent = () => {
         return prevText + message.charAt(prevText.length);
       });
     }, 100); // adjust the speed of typing here
-
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {
@@ -67,10 +67,13 @@ export const Maincontent = () => {
                   </ul>
                 </div>
               </div>
+              {!addToMainContext &&
               <h1 className="text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center flex-grow">
                 ChatGPT
                 <span className="bg-yellow-200 text-yellow-900 py-0.5 px-1.5 text-xs md:text-sm rounded-md uppercase">Plus</span>
               </h1>
+            }
+            {addToMainContext ? <Answer/> : null }
             </div>
           </div>
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl" action="">
