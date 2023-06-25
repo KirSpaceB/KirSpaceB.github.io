@@ -25,7 +25,7 @@ export const Answer = () => {
         <div className="flex-shrink-0 flex flex-col relative items-end">
           <div className="w-[30px]">
             <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
-              <img className="w-full h-full" src={RobotLogo} alt="Check Answer.tsx img tag with robotlogo" />
+              <img className="w-full h-full" src={RobotLogo} alt="Check Answer.tsx img tag with robotlogo"/>
             </div>
           </div>
         </div>

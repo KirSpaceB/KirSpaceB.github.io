@@ -28,10 +28,10 @@ export const Maincontent = () => {
   },[addToMainContext])
 
   return (
-    <div className="flex flex-grow overflow-x-hidden bg-[#373b46]">
+    <div className="flex flex-grow bg-[#373b46]">
       <div className="flex h-full max-w-full flex-1 flex-col">
         <main className="relative h-full w-full transition-width flex flex-col overflow-auto items-stretch flex-1">
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1">
             <div className="px-2 relative w-full flex flex-col h-full py-2 md:py-6">
               <div className="relative flex flex-col items-stretch justify-center gap-2 sm:items-center">
                 {!addToMainContext && 
@@ -82,7 +82,7 @@ export const Maincontent = () => {
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl" action="">
             <div className="relative flex h-full flex-1 items-stretch md:flex-col">
               <div className="flex flex-row bg-[#2d3444] w-[650px] h-[50px] rounded-lg">
-                <input value={text} readOnly className="w-full bg-[#2d3444] rounded-lg h-full placeholder:pl-4 pl-4" placeholder="Send Message">
+                <input value={text} readOnly className="w-full bg-[#2d3444] rounded-lg h-full placeholder:pl-4 pl-4 text-white text-xs" placeholder="Send Message">
                 </input>
                 <button className=" p-1 rounded-md md:bottom-3 md:p-2 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 disabled:text-gray-400 enabled:bg-brand-purple text-white bottom-1.5 transition-colors disabled:opacity-40">
                   <span>
