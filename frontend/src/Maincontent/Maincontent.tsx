@@ -20,7 +20,7 @@ export const Maincontent = () => {
         // Add the next character from the message
         return prevText + message.charAt(prevText.length);
       });
-    }, 100); // adjust the speed of typing here
+    }, 50); // adjust the speed of typing here
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {

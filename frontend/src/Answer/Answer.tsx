@@ -15,7 +15,7 @@ export const Answer = () => {
         }
         return prevChar + message.charAt(prevChar.length);
       });
-    }, 100);
+    }, 10);
     return () => clearInterval(timer);
   }, []);
 
