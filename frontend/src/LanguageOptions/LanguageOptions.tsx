@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { LandingPage } from "../DevelopersPortfolio/LandingPage";
+import { LandingPage } from "../DevelopersPortfolio/LandingPage/LandingPage";
 
 export const LanguageOptions = () => {
   const [languagePicked, setLanguagePicked] = useState(false);

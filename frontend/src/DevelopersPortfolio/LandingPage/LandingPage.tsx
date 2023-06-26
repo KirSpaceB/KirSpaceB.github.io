@@ -1,6 +1,7 @@
-import RobotLogo from "../shared/images/robot-svgrepo-com.svg";
+import RobotLogo from "../../shared/images/robot-svgrepo-com.svg";
 import { useState, useEffect } from "react";
-import { TechStackPage } from "./TechStackPage";
+import { TechStackPage } from "../TechStackPage";
+import { LandingPageName } from "./LandingPageName";
 
 export const LandingPage = () => {
 
@@ -36,7 +37,7 @@ export const LandingPage = () => {
       </div>
       <div className="flex flex-row relative">
         <div className="flex flex-col relative">
-          <h1 className="text-4xl	">Kirk Flores</h1>
+          <LandingPageName isRender={isTextComplete}/>
           <hr className="mb-10"/>
           <p>AHOY There!</p>
           <p>My Favorite hobbies are: Basketball, Football, Tennis, Hiking, and any physical activity :D </p>
