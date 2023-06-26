@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import RobotLogo from "../shared/images/robot-svgrepo-com.svg"
-import TypeScriptLogo from "./techstackicons/typescriptlogo.svg";
-import JavaSrciptLogo from "./techstackicons/javascriptlogo.svg"
+import { RobotLogo, TypeScriptLogo, JavaScriptLogo, MySQLIcon, ReactIcon, JestIcon, PythonIcon, TailwindIcon, CSharpIcon, AWSIcon, JqueryIcon, BootstrapIcon, VITEIcon, FlaskIcon, HTMLIcon } from "./techstackicons";
+
 export const TechStackPage = () => {
   let introduction = "These are the technologies I know and have used before :3";
   const [animateText, setAnimateText] = useState("");
@@ -33,10 +32,28 @@ export const TechStackPage = () => {
         </div>
         {animateText}
       </div>
-      <div className="flex flex-row">
-        <img src={TypeScriptLogo}></img>
-        <img src={JavaSrciptLogo}></img>
-
+      <div className="flex flex-col space-y-4">
+        <div className="flex flex-row"></div>
+          <div className="flex flex-row w-[48px] h-[48px]">
+            <img src={JavaScriptLogo}></img>
+            <img src={ReactIcon}></img>
+            <img src={TypeScriptLogo}></img>
+            <img src={JqueryIcon}></img>
+            <img src={HTMLIcon}></img>
+            <img src={BootstrapIcon}></img>
+            <img src={TailwindIcon}></img>
+          </div>
+          <div className="flex flex-row w-[48px] h-[48px]">
+            <img src={PythonIcon}></img>
+            <img src={FlaskIcon}></img>
+            <img src={CSharpIcon}></img>
+          </div>
+          <div className="flex flex-row w-[48px] h-[48px]">
+            <img src={MySQLIcon}></img>
+            <img src={JestIcon}/>
+            <img src={VITEIcon}/>
+            <img src={AWSIcon}/>
+          </div>
       </div>
     </div>
   )
