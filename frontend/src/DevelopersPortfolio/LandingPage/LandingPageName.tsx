@@ -1,17 +1,18 @@
-import { useState, useEffect } from "react"
-interface IRenderName {
-  isRender:boolean
-};
-export const LandingPageName = ({isRender}:IRenderName) => {
+import { useState, useEffect, useContext } from "react"
+import { IRendered } from "./sharedtypes/isRenderedType";
+import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
+export const LandingPageName = ({isRendered}:IRendered) => {
   let introduction = "Kirk Flores";
   const [animateText, setAnimateText] = useState("");
+  const {setIsRendered} = useContext(LandingPageNameContext)
 
   useEffect(() => {
-    if(isRender) {
+    if(isRendered) {
       const timer = setInterval(() => {
         setAnimateText((prevChar) => {
           if(prevChar.length === introduction.length) {
             clearInterval(timer);
+            setIsRendered(true);
             return prevChar;
           }
           return prevChar + introduction.charAt(prevChar.length);
@@ -19,11 +20,11 @@ export const LandingPageName = ({isRender}:IRenderName) => {
       }, 300);
       return () => clearInterval(timer);
     }
-  }, [isRender]);
+  }, [isRendered]);
 
   return (
     <>
-    {isRender && 
+    {isRendered && 
       <h1 className="text-4xl">{animateText}</h1>    
     }
     </>

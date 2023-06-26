@@ -107,7 +107,7 @@ export const Sidebar = () => {
                               </path>
                             </svg>
                             <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
-                              Where to find good developers
+                              GitHub
                             </div>
                           </a>
                         </li>
