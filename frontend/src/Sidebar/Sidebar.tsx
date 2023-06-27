@@ -4,8 +4,8 @@ export const Sidebar = () => {
 
 
   return (
-    <div className="dark flex-shrink-0 overflow-x-hidden bg-[#252323]">
-      <div className="h-full w-[260px]">
+    <div className="dark flex-shrink-0 overflow-x-hidden bg-[#191f2a]">
+      <div className="h-full w-[240px]">
         <div className="flex h-full min-h-0 flex-col">
           <nav className="flex h-full w-full flex-col p-2" aria-label="Chat History">
             <div className="mb-1 flex flex-row gap-2">
@@ -17,7 +17,7 @@ export const Sidebar = () => {
                 New Chat
               </a>
               <span>
-                <a className="flex p-3 gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border border-white/20 hover:bg-gray-500/10 h-11 flex-shrink-0 items-center justify-center bg-[#252323] w-full">
+                <a className="flex p-3 gap-3 transition-colors duration-200 text-white cursor-pointer text-sm rounded-md border border-white/20 hover:bg-gray-500/10 h-11 w-11 flex-shrink-0 items-center justify-center">
                   <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <rect x="3" y="3" width="18" height={"18"} rx={"2"} ry={"2"}>
                     </rect>
@@ -27,61 +27,30 @@ export const Sidebar = () => {
               </span>
             </div>
 
-            <div className="flex-col flex-1 transition-opacity duration-500 overflow-y-auto ">
+            <div className="flex-col flex-1 transition-opacity duration-500 overflow-y-auto">
               <div className="flex flex-col gap-2 pb-2 text-gray-100 text-sm">
                 <div>
                   <span>
                     <div className="relative h-auto opacity-1">
                       <div className="sticky top-0 z-16 opacity-1">
-                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#252323] border-white/20">
+                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#191f2a]">
                           Today
                         </h3>
                       </div>
                       <ol>
                         <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
                             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
                               </path>
                             </svg>
                             <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
-                              Resume
+                              Where to find good developers
                             </div>
                           </a>
                         </li>
                         <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
-                            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
-                              </path>
-                            </svg>
-                            <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
-                              LinkedIn
-                            </div>
-                          </a>
-                        </li>
-                      </ol>
-                    </div>
-                    <div className="relative h-auto opacity-1">
-                      <div className="sticky top-0 z-16 opacity-1">
-                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#252323]">
-                          Yesterday
-                        </h3>
-                      </div>
-                      <ol>
-                        <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
-                            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
-                              </path>
-                            </svg>
-                            <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
-                              Twitter
-                            </div>
-                          </a>
-                        </li>
-                        <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
                             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
                               </path>
@@ -95,24 +64,55 @@ export const Sidebar = () => {
                     </div>
                     <div className="relative h-auto opacity-1">
                       <div className="sticky top-0 z-16 opacity-1">
-                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#252323]">
-                          Past 30 days
+                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#191f2a]">
+                          Yesterday
                         </h3>
                       </div>
                       <ol>
                         <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
                             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
                               </path>
                             </svg>
                             <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
-                              GitHub
+                              Where to find good developers
                             </div>
                           </a>
                         </li>
                         <li className="relative z-[15] opacity-1 h-auto ">
-                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#252323] group">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
+                            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                              </path>
+                            </svg>
+                            <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
+                              How to center div
+                            </div>
+                          </a>
+                        </li>
+                      </ol>
+                    </div>
+                    <div className="relative h-auto opacity-1">
+                      <div className="sticky top-0 z-16 opacity-1">
+                        <h3 className="h-9 pb-2 pt-3 px-3 text-xs text-gray-500 font-medium text-ellipsis overflow-hidden break-all bg-[#191f2a]">
+                          Past 30 days
+                        </h3>
+                      </div>
+                      <ol>
+                        <li className="relative z-[15] opacity-1 h-auto ">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
+                            <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+                              </path>
+                            </svg>
+                            <div className="flex-1 truncate relative max-h-20 break-normal text-xs">
+                              Where to find good developers
+                            </div>
+                          </a>
+                        </li>
+                        <li className="relative z-[15] opacity-1 h-auto ">
+                          <a className="flex py-3 px-3 items-center gap-3 relative rounded-md hover:bg-[#2A2B32] cursor-pointer break-all )} )} hover:pr-4 bg-[#191f2a] group">
                             <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
                               </path>
@@ -137,7 +137,7 @@ export const Sidebar = () => {
                   <circle cx="19" cy="12" r="1"></circle>
                   <circle cx="5" cy="12" r="1"></circle>
                 </svg>
-              </div>
+              </div>              
             </div>
           </nav>
         </div>

@@ -1,5 +1,5 @@
-import { Maincontent } from "./MainContent/Maincontent";
-import { Sidebar } from "./Sidebar/Sidebar";
+import { Maincontent } from "./Maincontent/Maincontent"
+import { Sidebar } from "./Sidebar/Sidebar"
 
 const App = () => {
 
