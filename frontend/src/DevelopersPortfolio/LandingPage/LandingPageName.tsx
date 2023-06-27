@@ -7,7 +7,6 @@ export const LandingPageName = ({isRendered}:IRendered) => {
   
   const {setIsRendered} = useContext(LandingPageNameContext);
   
-
   useEffect(() => {
     if(isRendered) {
       const timer = setInterval(() => {
@@ -19,16 +18,16 @@ export const LandingPageName = ({isRendered}:IRendered) => {
           }
           return prevChar + introduction.charAt(prevChar.length);
         });
-      }, 300);
+      }, 10);
       return () => clearInterval(timer);
     }
   }, [isRendered]);
 
   return (
     <>
-    {isRendered && 
-      <h1 className="text-4xl">{animateText}</h1>    
-    }
+      {isRendered && 
+        <h1 className="text-4xl">{animateText}</h1>    
+      }
     </>
   )
 }
