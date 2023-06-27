@@ -1,5 +1,5 @@
 import RobotLogo from "../../shared/images/robot-svgrepo-com.svg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageGreeting } from "./LandingPageGreeting";
@@ -53,7 +53,7 @@ export const LandingPage = () => {
             <img src={RobotLogo} alt="" className="w-[300px] h-[300px] relative left-[300px]"/>
           </div>
           <div className="flex flex-col gap-4 overflow-y-auto">
-            {isTextComplete && 
+            {isGreetingFinished && 
               <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
                 <TechStackPage/>
               </div>
