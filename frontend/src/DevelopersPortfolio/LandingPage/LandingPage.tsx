@@ -7,6 +7,7 @@ import { LandingPageNameContextProvider } from "./sharedcontext/LandingPageNameC
 import { LandingPageAgeLocationContextProvider } from "./sharedcontext/LandingPageAgeLocationContext";
 import { LandingPageAgeLocation } from "./LandingPageAgeLocation";
 import { TechStackContextProvider } from "./sharedcontext/TechStackContext";
+import { ProjectPage } from "../ProjectPage/ProjectPage";
 export const LandingPage = () => {
 
   let introduction = "Here is a personal introduction of who he is! :D";
@@ -56,6 +57,11 @@ export const LandingPage = () => {
             <div className="flex flex-col gap-4 overflow-y-auto">
               <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
                 <TechStackPage/>
+              </div>
+            </div>
+            <div className="flex flex-col gap-4 overflow-y-auto">
+              <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
+                <ProjectPage/>
               </div>
             </div>
           </div>
