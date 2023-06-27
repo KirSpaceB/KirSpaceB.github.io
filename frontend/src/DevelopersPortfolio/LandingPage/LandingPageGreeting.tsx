@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
+import { LandingPageAgeLocationContext } from "./sharedcontext/LandingPageAgeLocationContext";
 export const LandingPageGreeting = () => {
 
   let greeting = "AHOY THERE!";
@@ -7,7 +8,9 @@ export const LandingPageGreeting = () => {
   const [animateTextGreeting, setAnimateTextGreeting] = useState("");
   const [animateTextHobbies, setAnimateTextHobbies] = useState("");
   const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);
-  const {isRendered} = useContext(LandingPageNameContext)
+
+  const {isRendered} = useContext(LandingPageNameContext);
+  const {setIsGreetingFinished} = useContext(LandingPageAgeLocationContext);
 
   // Only trigger this useEffect hook if componentOne is done animating!
   useEffect(() => {
@@ -32,6 +35,7 @@ export const LandingPageGreeting = () => {
         setAnimateTextHobbies((prevChar) => {
           if(prevChar.length === hobbies.length) {
             clearInterval(timer);
+            setIsGreetingFinished(true)
             return prevChar;
           }
           return prevChar + hobbies.charAt(prevChar.length);

@@ -4,6 +4,8 @@ import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageGreeting } from "./LandingPageGreeting";
 import { LandingPageNameContextProvider } from "./sharedcontext/LandingPageNameContext";
+import { LandingPageAgeLocationContextProvider } from "./sharedcontext/LandingPageAgeLocationContext";
+import { LandingPageAgeLocation } from "./LandingPageAgeLocation";
 
 export const LandingPage = () => {
 
@@ -26,37 +28,39 @@ export const LandingPage = () => {
   }, []);
 
   return (
-    <LandingPageNameContextProvider>
-      <div className="flex flex-col p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
-        <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
-          <div className="w-[30px]">
-            <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
-              <img src={RobotLogo} alt="" className="w-full h-full" />
+    <LandingPageAgeLocationContextProvider>
+      <LandingPageNameContextProvider>
+        <div className="flex flex-col p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
+          <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
+            <div className="w-[30px]">
+              <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
+                <img src={RobotLogo} alt="" className="w-full h-full" />
+              </div>
+            </div>
+            <div>
+              {animateText}
             </div>
           </div>
-          <div>
-            {animateText}
-          </div>
-        </div>
-        <div className="flex flex-row relative">
-          <div className="flex flex-col relative">
-            <LandingPageName isRendered={isTextComplete}/>
+          <div className="flex flex-row relative">
+            <div className="flex flex-col relative">
+              <LandingPageName isRendered={isTextComplete}/>
 
-            <hr className="mb-10"/>
-            <LandingPageGreeting/>
-            <hr className="mt-10"/>
-            <h1 className="text-4xl">21 Year Old Software Developer based in Southern California</h1>
-          </div>
-          <img src={RobotLogo} alt="" className="w-[300px] h-[300px] relative left-[300px]"/>
-        </div>
-        <div className="flex flex-col gap-4 overflow-y-auto">
-          {isTextComplete && 
-            <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
-              <TechStackPage/>
+              <hr className="mb-10"/>
+              <LandingPageGreeting/>
+              <hr className="mt-10"/>
+              <LandingPageAgeLocation/>
             </div>
-          }
+            <img src={RobotLogo} alt="" className="w-[300px] h-[300px] relative left-[300px]"/>
+          </div>
+          <div className="flex flex-col gap-4 overflow-y-auto">
+            {isTextComplete && 
+              <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
+                <TechStackPage/>
+              </div>
+            }
+          </div>
         </div>
-      </div>
-    </LandingPageNameContextProvider>
+      </LandingPageNameContextProvider>
+    </LandingPageAgeLocationContextProvider>
   )
 }
