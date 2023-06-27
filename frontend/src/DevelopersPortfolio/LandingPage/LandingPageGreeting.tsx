@@ -6,8 +6,8 @@ export const LandingPageGreeting = () => {
   let hobbies = "My Favorite hobbies are: Basketball, Football, Tennis, Hiking, and any physical activity :D "
   const [animateTextGreeting, setAnimateTextGreeting] = useState("");
   const [animateTextHobbies, setAnimateTextHobbies] = useState("");
-  const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false)
-  const {isRendered} = useContext(LandingPageNameContext);
+  const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);
+  const {isRendered} = useContext(LandingPageNameContext)
 
   // Only trigger this useEffect hook if componentOne is done animating!
   useEffect(() => {

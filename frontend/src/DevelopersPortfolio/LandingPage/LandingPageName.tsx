@@ -4,7 +4,9 @@ import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
 export const LandingPageName = ({isRendered}:IRendered) => {
   let introduction = "Kirk Flores";
   const [animateText, setAnimateText] = useState("");
-  const {setIsRendered} = useContext(LandingPageNameContext)
+  
+  const {setIsRendered} = useContext(LandingPageNameContext);
+  
 
   useEffect(() => {
     if(isRendered) {
