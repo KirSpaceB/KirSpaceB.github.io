@@ -24,7 +24,7 @@ export const LandingPageGreeting = () => {
           }
           return prevChar + greeting.charAt(prevChar.length);
         });
-      }, 100);
+      }, 10);
       return () => clearInterval(timer);
     }
   }, [isRendered]);
