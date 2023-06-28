@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Answer } from "../Answer/Answer";
-
 export const Maincontent = () => {
   const [text,setText] = useState("");
   // When this is set to true we render a new component
@@ -75,8 +74,9 @@ export const Maincontent = () => {
                   ChatGPT
                   <span className="bg-yellow-200 text-yellow-900 py-0.5 px-1.5 text-xs md:text-sm rounded-md uppercase">Plus</span>
                 </h1>
-            }
-            {addToMainContext ? <Answer/> : null }
+              }
+              {addToMainContext ? <Answer/> : null }
+
             </div>
           </div>
           <form className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl" action="">

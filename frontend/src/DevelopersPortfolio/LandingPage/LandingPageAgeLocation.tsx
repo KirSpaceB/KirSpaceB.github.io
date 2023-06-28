@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { LandingPageAgeLocationContext } from "./sharedcontext/LandingPageAgeLocationContext";
 import { TechStackContext } from "./sharedcontext/TechStackContext";
+import { RobotLogo } from "../techstackicons";
 export const LandingPageAgeLocation = () => {
   const {isGreetingFinished} = useContext(LandingPageAgeLocationContext);
   const {setIsAgeLocationFinished} = useContext(TechStackContext);
@@ -26,6 +27,8 @@ export const LandingPageAgeLocation = () => {
   return (
     <h1 className = "text-4xl">
       {ageLocationAnimation}
+      <img src={RobotLogo} alt="" className="w-[300px] h-[300px] relative left-[300px]"/>
+
     </h1>
   )
 }

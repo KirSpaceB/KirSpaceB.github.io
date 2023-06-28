@@ -1,5 +1,5 @@
 import RobotLogo from "../../shared/images/robot-svgrepo-com.svg";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageGreeting } from "./LandingPageGreeting";
@@ -35,16 +35,20 @@ export const LandingPage = () => {
         <LandingPageAgeLocationContextProvider>
           <LandingPageNameContextProvider>
             <div className="flex flex-col p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
-              <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
-                <div className="w-[30px]">
-                  <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
-                    <img src={RobotLogo} alt="" className="w-full h-full" />
+              {/* Try and make this its own component  */}
+              <div className="flex flex-row">
+                <div className="flex-shrink-0 flex flex-col relative items-start">
+                  <div className="w-[30px]">
+                    <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
+                      <img src={RobotLogo} alt="" className="w-full h-full" />
+                    </div>
                   </div>
                 </div>
-                <div>
-                  {animateText}
-                </div>
+                {animateText}
               </div>
+
+              {/* Try and make this its own component  */}
+
               <div className="flex flex-row relative">
                 <div className="flex flex-col relative">
                   <LandingPageName isRendered={isTextComplete}/>
@@ -54,7 +58,6 @@ export const LandingPage = () => {
                   <hr className="mt-10"/>
                   <LandingPageAgeLocation/>
                 </div>
-                <img src={RobotLogo} alt="" className="w-[300px] h-[300px] relative left-[300px]"/>
               </div>
               <div className="flex flex-col gap-4 overflow-y-auto">
                 <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">

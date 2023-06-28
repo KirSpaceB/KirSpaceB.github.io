@@ -31,7 +31,7 @@ export const TechStackPage = () => {
   return (
     <>
       {isAgeLocationFinished && 
-        <div className="w-full text-gray-800 dark:text-gray-100 border-b dark:border-gray-900/50 dark:bg-[#444654]">
+        <div className="w-full text-gray-800 dark:text-gray-100 dark:border-gray-900/50 dark:bg-[#444654]">
           <div className="flex p-4 gap-4 text-base ">
             <div className="flex-shrink-0 flex flex-col">
                 <div className="w-[30px]">

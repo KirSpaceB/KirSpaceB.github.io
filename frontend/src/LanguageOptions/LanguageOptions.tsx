@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { LandingPage } from "../DevelopersPortfolio/LandingPage/LandingPage";
 
 export const LanguageOptions = () => {
@@ -26,9 +26,7 @@ export const LanguageOptions = () => {
 
       <div className="flex flex-col gap-4 overflow-y-auto">
         {languagePicked && 
-          <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto overflow-y-auto">
-            <LandingPage/>
-          </div>
+          <LandingPage/>
         }
       </div>
     </div>
