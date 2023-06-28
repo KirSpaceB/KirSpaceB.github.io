@@ -67,8 +67,8 @@ export const Maincontent = () => {
                     </ul>
                   </div>
                 }
-                
               </div>
+              
               {!addToMainContext &&
                 <h1 className="text-4xl font-semibold text-center text-gray-200 dark:text-gray-600 ml-auto mr-auto mb-10 sm:mb-16 flex gap-2 items-center justify-center flex-grow">
                   ChatGPT

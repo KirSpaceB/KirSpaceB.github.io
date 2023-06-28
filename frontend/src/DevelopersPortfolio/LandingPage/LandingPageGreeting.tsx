@@ -1,54 +1,40 @@
-import { useState, useEffect, useContext } from "react";
-import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
+import { useContext, useEffect, useState } from "react";
 import { LandingPageAgeLocationContext } from "./sharedcontext/LandingPageAgeLocationContext";
+import { TechStackContext } from "./sharedcontext/TechStackContext";
+import { RobotLogo } from "../techstackicons";
 export const LandingPageGreeting = () => {
+  const {isGreetingFinished} = useContext(LandingPageAgeLocationContext);
+  const {setIsAgeLocationFinished} = useContext(TechStackContext);
+  
+  const [ageLocationAnimation, setAgeLocationAnimation] = useState("");
+  const [isAnimatedTextFinished, setIsAnimatedTextFinished] = useState(false);
 
-  let greeting = "AHOY THERE!";
-  let hobbies = "My Favorite hobbies are: Basketball, Football, Tennis, Hiking, and any physical activity :D "
-  const [animateTextGreeting, setAnimateTextGreeting] = useState("");
-  const [animateTextHobbies, setAnimateTextHobbies] = useState("");
-  const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);
-
-  const {isRendered} = useContext(LandingPageNameContext);
-  const {setIsGreetingFinished} = useContext(LandingPageAgeLocationContext);
-
-  // Only trigger this useEffect hook if componentOne is done animating!
+   let ageLocation = "AHOY There! Here are some of my favorite hobbies and activities: Basketball, Football, Tennis, and any physical activity!"
   useEffect(() => {
-    if(isRendered) {
+    if(isGreetingFinished) {
       const timer = setInterval(() => {
-        setAnimateTextGreeting((prevChar) => {
-          if(prevChar.length === greeting.length) {
+        setAgeLocationAnimation((prevChar) => {
+          if(prevChar.length === ageLocation.length) {
             clearInterval(timer);
-            setIsAnimateGreetingDone(true)
+            setIsAnimatedTextFinished(true)
+            setIsAgeLocationFinished(true)
             return prevChar;
           }
-          return prevChar + greeting.charAt(prevChar.length);
+          return prevChar + ageLocation.charAt(prevChar.length);
         });
       }, 10);
       return () => clearInterval(timer);
     }
-  }, [isRendered]);
-
-  useEffect(() => {
-    if(isAnimateGreetingDone) {
-      const timer = setInterval(() => {
-        setAnimateTextHobbies((prevChar) => {
-          if(prevChar.length === hobbies.length) {
-            clearInterval(timer);
-            setIsGreetingFinished(true)
-            return prevChar;
-          }
-          return prevChar + hobbies.charAt(prevChar.length);
-        });
-      }, 20);
-      return () => clearInterval(timer);
-    }
-  }, [isAnimateGreetingDone]);
-
+  }, [isGreetingFinished]);
   return (
-    <>
-      <p>{animateTextGreeting}</p>
-      <p>{animateTextHobbies}</p>
-    </>
+    <div className="flex flex-row justify-center items-center space-x-16">
+      <h1 className = "text-m justify-center text-center">
+        {ageLocationAnimation}
+      </h1>
+      {isAnimatedTextFinished ?
+          <img src={RobotLogo} alt="" className="w-[300px] h-[300px] left-[300px]"/> : undefined      
+        }
+    </div>
+
   )
 }

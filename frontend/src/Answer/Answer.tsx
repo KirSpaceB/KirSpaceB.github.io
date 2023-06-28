@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import RobotLogo from "../shared/images/robot-svgrepo-com.svg"
 import { LanguageOptions } from "../LanguageOptions/LanguageOptions";
 export const Answer = () => {
-  let message = "Sure thing! Heres a developer I personally know that is really passionate and ambious in the field of programming, hes loves programming so much he does it for fun :D let me redirect you to his page PAWGERS";
+  let message = "Sure thing!";
   const [animateText, setAnimateText] = useState("");
   const [isTextComplete, setIsTextComplete] = useState(false);
   useEffect(() => {
@@ -32,7 +32,7 @@ export const Answer = () => {
         {animateText}
       </div>
       {isTextComplete &&
-        <div className="flex flex-row p-4 items-center justify-center">
+        <div className="flex flex-col justify-center w-full h-fulls">
           <LanguageOptions/>
         </div>
       }
