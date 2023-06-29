@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import RobotLogo from "../shared/images/robot-svgrepo-com.svg"
 import { LanguageOptions } from "../LanguageOptions/LanguageOptions";
 export const Answer = () => {
-  let message = "Sure thing!";
+  let message = "Sure thing! I know just the right developer who is hard working, focused, creative and passionate about technology! Please select the language in which you want me to introduce him in.";
   const [animateText, setAnimateText] = useState("");
   const [isTextComplete, setIsTextComplete] = useState(false);
   useEffect(() => {

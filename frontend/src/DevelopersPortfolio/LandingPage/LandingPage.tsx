@@ -11,7 +11,7 @@ import { TechStackContextProvider } from "./sharedcontext/TechStackContext";
 import { ProjectPage } from "../ProjectPage/ProjectPage";
 export const LandingPage = () => {
 
-  let introduction = "Here is a personal introduction of who he is! :D";
+  let introduction = "Here is an introduction of who he is and some of his hobbies.";
   const [animateText, setAnimateText] = useState("");
   const [isTextComplete, setIsTextComplete] = useState(false);
 

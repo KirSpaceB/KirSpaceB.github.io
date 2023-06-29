@@ -6,7 +6,7 @@ import GisMapVid from "./ProjectPageVideos/Gismap.mp4";
 import PersonalFinancePage from "./ProjectPageVideos/Personal-finance-page.mp4"
 export const ProjectPage = () => {
   const {isTechStackFinished} = useContext(ProjectPageContext);
-  let animatedText = "These are my projects that I worked very hard ON :D";
+  let animatedText = "These are the projects he has created and worked on. Most of his projects are due to a problem he encountered in real life and tried to solve by creating a solution. But, he found some projects that looked really fun to do so he did them.";
   const [animateText, setAnimateText] = useState("");
 
   useEffect(() => {
