@@ -22,4 +22,4 @@ RUN npm install -g serve
 EXPOSE 5000
 
 # Serve the application
-CMD ["serve", "-s", "dist", "-l", "5000"]
+CMD ["npx", "serve", "-s", "dist", "-l", "5000"]
