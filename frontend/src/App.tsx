@@ -1,11 +1,11 @@
 import { Sidebar } from "./Sidebar/Sidebar";
-import { MainContent } from "./MainContent/MainContent";
+import { Test } from "./changenamebecauseoflineux/namelaterlinux";
 
 const App = () => {
   return (
     <div className="overflow-hidden w-screen h-screen relative flex z-0">
       <Sidebar/>
-      <MainContent/>
+      <Test/>
     </div>
   )
 }
