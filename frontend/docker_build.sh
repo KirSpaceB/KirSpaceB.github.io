@@ -1,1 +1,1 @@
-docker build -t kirkflores/kiby.io .
+docker build -t kirkflores/kiby.io:latest .
