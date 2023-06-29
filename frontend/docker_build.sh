@@ -1,1 +1,1 @@
-docker build -t kirby.io
+docker build -t KirkFlores/kiby.io .
