@@ -59,7 +59,7 @@ export const ProjectPage = () => {
                   <button className="border-2 w-[100px]">Live Demo</button>
                 </div>
 
-                <p className="text-justify w-[250px] h-[250px]">
+                <p className="text-justify tracking-tighter w-[250px] h-[250px]">
                   This was my first ever big project :D. The project goal was to get a better understanding of Data Structures and Algorithms. Though not perfect it helped me visualize what the Algorithms would look like tranversing a dataset. Which in this case is a 2D array of divs.
                 </p>
               </div>
@@ -80,7 +80,7 @@ export const ProjectPage = () => {
                   <button className="border-2 w-[100px]">Live Demo</button>
                 </div>
 
-                <p className="text-justify w-[250px] h-[250px]">
+                <p className="text-justify tracking-tighter w-[250px] h-[250px]">
                   After losing money on investing I wanted to create a project that helped me looked at charts, read news, and document my profit/loss. This project is intended to do that with charts rendered using d3.js, news fetched using news.io api, and a personal documentating page.
                 </p>
               </div>
@@ -101,7 +101,7 @@ export const ProjectPage = () => {
                   <button className="border-2 w-[100px]">Live Demo</button>
                 </div>
 
-                <p className="text-justify w-[250px] h-[250px]">
+                <p className="text-justify tracking-tighter w-[250px] h-[250px]">
                   I discovered this part of web dev when looking at ways to know the wait time at my local starbucks. After which I found about an SDK that lets me develop 2D interactive maps of the world. Soon after I found that the SDK let me handle and display data on the map which I did here.
                 </p>
               </div>
