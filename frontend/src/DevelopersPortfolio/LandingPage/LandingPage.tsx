@@ -4,7 +4,7 @@ import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageAgeDesc } from "./LandingPageAgeDesc";
 import { LandingPageNameContextProvider } from "./sharedcontext/LandingPageNameContext";
-import { LandingPageAgeLocationContextProvider } from "./sharedcontext/LandingPageAgeLocationContext";
+import { LandingPageAgeLocationContextProvider } from "./sharedcontext/AgeDescContext";
 import { ProjectPageContextProvider } from "./sharedcontext/ProjectPageContext";
 import { LandingPageGreeting } from "./LandingPageGreeting";
 import { TechStackContextProvider } from "./sharedcontext/TechStackContext";
@@ -50,9 +50,12 @@ export const LandingPage = () => {
               </div>
 
 
-              <div className="flex flex-col">
-                <LandingPageName isRendered={isTextComplete}/>
-                <LandingPageAgeDesc/>
+              <div className="flex flex-col items-center">
+                <div>
+                  <LandingPageName isRendered={isTextComplete}/>
+                  <LandingPageAgeDesc/>
+                </div>
+
               </div>
 
               <div>

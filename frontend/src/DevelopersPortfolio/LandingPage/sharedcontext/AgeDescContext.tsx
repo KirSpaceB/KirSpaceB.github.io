@@ -9,14 +9,14 @@ interface IChildrenForContext {
   children: ReactNode;
 };
 
-export const LandingPageAgeLocationContext = createContext<ILandingPageAgeLocationContext>({isGreetingFinished:false, setIsGreetingFinished: () => undefined});
+export const AgeDesContext = createContext<ILandingPageAgeLocationContext>({isGreetingFinished:false, setIsGreetingFinished: () => undefined});
 
 export const LandingPageAgeLocationContextProvider = ({children} : IChildrenForContext) => {
   const [isGreetingFinished, setIsGreetingFinished] = useState(false);
 
   return (
-    <LandingPageAgeLocationContext.Provider value={{isGreetingFinished, setIsGreetingFinished}}>
+    <AgeDesContext.Provider value={{isGreetingFinished, setIsGreetingFinished}}>
       {children}
-    </LandingPageAgeLocationContext.Provider>
+    </AgeDesContext.Provider>
   )
 }
