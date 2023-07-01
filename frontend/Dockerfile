@@ -1,5 +1,5 @@
 #Use NodeJS 20 :3
-FROM node:20
+FROM node:20.2.0
 #Set a working directory
 WORKDIR /app
 #Install npm 9.6.6
