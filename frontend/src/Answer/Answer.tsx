@@ -32,7 +32,7 @@ export const Answer = () => {
         {animateText}
       </div>
       {isTextComplete &&
-        <div className="flex flex-col justify-center w-full h-fulls">
+        <div className="flex flex-col justify-center w-full h-full text-gray-800 dark:text-gray-100 border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
           <LanguageOptions/>
         </div>
       }

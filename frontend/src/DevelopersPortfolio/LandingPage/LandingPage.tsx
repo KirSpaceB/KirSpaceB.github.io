@@ -34,7 +34,7 @@ export const LandingPage = () => {
       <TechStackContextProvider>
         <LandingPageAgeLocationContextProvider>
           <LandingPageNameContextProvider>
-            <div className="flex flex-col w-full h-full space-y-4 text-gray-800 dark:text-gray-100 border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
+            <div className="flex flex-col w-full h-full space-y-4 text-gray-800 dark:text-gray-100 border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654] overflow-x-auto">
 
 
               <div>
@@ -63,9 +63,9 @@ export const LandingPage = () => {
               </div>
 
 
-                  <TechStackPage/>
+              <TechStackPage/>
+              <ProjectPage/>
 
-                  <ProjectPage/>
 
             </div>
           </LandingPageNameContextProvider>

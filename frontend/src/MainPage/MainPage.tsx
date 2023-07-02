@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Answer } from "../Answer/Answer";
 
-export const Test = () => {
+export const MainPage = () => {
   const [text,setText] = useState("");
   // When this is set to true we render a new component
   const [addToMainContext, setAddToMainContext] = useState(false)

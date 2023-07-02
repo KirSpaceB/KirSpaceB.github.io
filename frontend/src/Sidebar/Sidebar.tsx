@@ -4,7 +4,7 @@ export const Sidebar = () => {
 
 
   return (
-    <div className="dark flex-shrink-0 overflow-x-hidden bg-[#252323]">
+    <div className="dark flex-shrink-0 bg-[#252323]">
       <div className="h-full w-[260px]">
         <div className="flex h-full min-h-0 flex-col">
           <nav className="flex h-full w-full flex-col p-2" aria-label="Chat History">

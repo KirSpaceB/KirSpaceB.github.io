@@ -1,14 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 import { AgeDesContext } from "./sharedcontext/AgeDescContext";
 import { TechStackContext } from "./sharedcontext/TechStackContext";
-import { RobotLogo } from "../techstackicons";
+import MeWithLongHair  from "../../shared/images/Screenshot 2023-04-26 at 2.21.33 PM.png"
 export const LandingPageGreeting = () => {
   const {isGreetingFinished} = useContext(AgeDesContext);
   const {setIsAgeLocationFinished} = useContext(TechStackContext);
   
   const [ageLocationAnimation, setAgeLocationAnimation] = useState("");
   const [isAnimatedTextFinished, setIsAnimatedTextFinished] = useState(false);
-  const [isAhoyThereDone, setIsAhoyThereDone] = useState(false)
+  const [isAhoyThereDone, setIsAhoyThereDone] = useState(false);
+  const [makeButtonDisappear, setMakeButtonDisappear] = useState(true);
   let ahoyThere = "AHOY There! Here are some of my favorite hobbies and activities: Basketball, Football, Tennis, and any physical activity!"
 
 
@@ -31,6 +32,7 @@ export const LandingPageGreeting = () => {
 
   const buttonHandler = () => {
     setIsAgeLocationFinished(true)
+    setMakeButtonDisappear(false)
   };
   return (
     <div className="flex flex-col justify-center items-center space-x-16">
@@ -39,11 +41,11 @@ export const LandingPageGreeting = () => {
           {ageLocationAnimation}
         </h1>
         {isAnimatedTextFinished ?
-          <img src={RobotLogo} alt="" className="w-[300px] h-[300px]"/> : undefined      
+          <img src={MeWithLongHair} alt="" className="w-[400px] h-[500px] rounded-md"/> : undefined      
         }
       </div>
 
-      {isAhoyThereDone ? 
+      {makeButtonDisappear && isAhoyThereDone ? 
         <div className="flex items-center justify-center my-10">
 
           <button className="flex flex-row text-xs p-2 items-center cursor-pointer rounded-md border border-white/20 hover:bg-gray-500/10 h10" onClick={buttonHandler}>

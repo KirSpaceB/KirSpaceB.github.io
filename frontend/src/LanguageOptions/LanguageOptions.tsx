@@ -13,13 +13,13 @@ export const LanguageOptions = () => {
           <div className="flex w-[100px] text-center justify-center"> English? </div>
         </button>
         <button className="border-2">
-          <div className="flex w-[100px] text-center justify-center">
-            中国人?
+          <div className="flex w-[130px] text-center justify-center">
+            中国人?(wip)
           </div>
         </button>
         <button className="border-2">
-          <div className="flex w-[100px] text-center justify-center">
-            Tagalog?
+          <div className="flex w-[130px] text-center justify-center">
+            Tagalog?(wip)
           </div>
         </button>
       </div>
