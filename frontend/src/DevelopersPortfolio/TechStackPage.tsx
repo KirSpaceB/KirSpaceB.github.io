@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { RobotLogo, TypeScriptLogo, JavaScriptLogo, MySQLIcon, ReactIcon, JestIcon, PythonIcon, TailwindIcon, CSharpIcon, AWSIcon, JqueryIcon, BootstrapIcon, VITEIcon, FlaskIcon, HTMLIcon } from "./techstackicons";
+import { RobotLogo, TypeScriptLogo, JavaScriptLogo, MySQLIcon, ReactIcon, JestIcon, PythonIcon, TailwindIcon, CSharpIcon, AWSIcon, JqueryIcon, BootstrapIcon, VITEIcon, FlaskIcon, HTMLIcon,DockerIcon,GitHubIcon } from "./techstackicons";
 import { TechStackContext } from "./LandingPage/sharedcontext/TechStackContext";
 import { ProjectPageContext } from "./LandingPage/sharedcontext/ProjectPageContext";
 
@@ -69,6 +69,8 @@ export const TechStackPage = () => {
                   <img src={JestIcon}/>
                   <img src={VITEIcon}/>
                   <img src={AWSIcon}/>
+                  <img src={DockerIcon}></img>
+                  <img src={GitHubIcon}></img>
                 </div>
               </div>        
             }

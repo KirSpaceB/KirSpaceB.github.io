@@ -15,6 +15,8 @@ import HTMLIcon from "./icons8-html5.svg";
 import AWSIcon from "./aws-svgrepo-com.svg";
 import VITEIcon from "./vite-svgrepo-com.svg";
 import BootstrapIcon from "./icons8-bootstrap.svg";
+import GitHubIcon from "./icons8-github.svg";
+import DockerIcon from "./icons8-docker.svg";
 
-export { MySQLIcon, JavaScriptLogo, TypeScriptLogo, RobotLogo, ReactIcon, NextJSIcon, JestIcon, PythonIcon, TailwindIcon, JqueryIcon, FlaskIcon, CSharpIcon, HTMLIcon, AWSIcon, VITEIcon, BootstrapIcon };
+export { MySQLIcon, JavaScriptLogo, TypeScriptLogo, RobotLogo, ReactIcon, NextJSIcon, JestIcon, PythonIcon, TailwindIcon, JqueryIcon, FlaskIcon, CSharpIcon, HTMLIcon, AWSIcon, VITEIcon, BootstrapIcon, GitHubIcon, DockerIcon };
 
