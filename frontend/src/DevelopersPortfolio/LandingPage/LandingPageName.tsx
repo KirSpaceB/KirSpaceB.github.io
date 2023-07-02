@@ -18,7 +18,7 @@ export const LandingPageName = ({isRendered}:IRendered) => {
           }
           return prevChar + introduction.charAt(prevChar.length);
         });
-      }, 10);
+      }, 20);
       return () => clearInterval(timer);
     }
   }, [isRendered]);

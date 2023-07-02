@@ -4,7 +4,7 @@ import { AgeDesContext } from "./sharedcontext/AgeDescContext";
 export const LandingPageAgeDesc = () => {
 
   let greeting = "21yr. old software developer based in southern california.";
-  let hobbies = "full-stack development, gis-development, currently learning docker ;p"
+  let hobbies = "full-stack development, gis-development, currently implementing CI/CD with GitHub actions ;3"
   const [animateTextGreeting, setAnimateTextGreeting] = useState("");
   const [animateTextHobbies, setAnimateTextHobbies] = useState("");
   const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);
@@ -24,7 +24,7 @@ export const LandingPageAgeDesc = () => {
           }
           return prevChar + greeting.charAt(prevChar.length);
         });
-      }, 10);
+      }, 20);
       return () => clearInterval(timer);
     }
   }, [isRendered]);

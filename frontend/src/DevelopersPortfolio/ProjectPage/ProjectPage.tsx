@@ -21,7 +21,7 @@ export const ProjectPage = () => {
           };
           return prevChar + animatedText.charAt(prevChar.length);
         });
-      }, 30)
+      }, 20)
       return () => clearInterval(timer)
     }
   },[isTechStackFinished])
