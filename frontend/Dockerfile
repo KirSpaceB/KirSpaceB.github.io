@@ -11,6 +11,8 @@ RUN npm install
 
 #Copy the Source code
 COPY . /app
+#Change in WORKDIR
+WORKDIR /app/frontend
 
 #Build the application
 RUN npm run deploy
