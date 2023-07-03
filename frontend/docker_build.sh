@@ -1,1 +1,1 @@
-docker build -t kirkflores/kiby.io:latest .
+docker build -t kirkflores/kiby.io:latest . -f frontend/Dockerfile
