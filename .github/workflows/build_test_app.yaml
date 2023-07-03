@@ -22,9 +22,9 @@ jobs:
       run: docker build -t kirkflores/kiby.io:latest .
 
     - name: Run Docker Container 
-      run: | 
-      docker run --name temp_container kirkflores/kiby.io:latest
-      docker cp temp_container:/app/build ./build
+      run: |
+        docker run --name temp_container kirkflores/kiby.io:latest
+        docker cp temp_container:/app/dist ./dist
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
