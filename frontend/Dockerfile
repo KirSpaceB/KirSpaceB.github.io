@@ -14,12 +14,3 @@ COPY . ./
 
 #Build the application
 RUN npm run build
-
-# Install 'serve' to serve the application
-RUN npm install -g serve
-
-# Expose the port that 'serve' will run on
-EXPOSE 5000
-
-# Serve the application
-CMD ["npx", "serve", "-s", "dist", "-l", "5000"]
