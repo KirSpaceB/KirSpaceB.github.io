@@ -5,12 +5,12 @@ WORKDIR /app
 #Install npm 9.6.6
 RUN npm install -g npm@9.6.6
 #Get package json
-COPY package*.json ./
+COPY /frontend/package*.json ./
 #Install Dependencies
 RUN npm install
 
 #Copy the Source code
-COPY . ./
+COPY . .
 
 #Build the application
 RUN npm run build
