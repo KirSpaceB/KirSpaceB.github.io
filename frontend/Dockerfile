@@ -13,4 +13,4 @@ RUN npm install
 COPY . /app
 
 #Build the application
-RUN npm run build
+RUN npm run deploy
