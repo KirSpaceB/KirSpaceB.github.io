@@ -7,8 +7,9 @@ RUN npm install -g npm@9.6.6
 #Get package json // For some reason this has to be /frontend because its relative path to the root directory while everything else is relative path to the built docker directory
 COPY ./frontend/package*.json ./frontend/
 #Install Dependencies
+WORKDIR /app/frontend
 RUN npm install
-
+WORKDIR /app
 #Copy the Source code
 COPY . ./
 #Change in WORKDIR
