@@ -12,6 +12,6 @@ RUN npm install
 #Copy the Source code
 COPY . ./
 #Change in WORKDIR
-
+RUN git remote add origin https://github.com/KirSpaceB/KirSpaceB.github.io.git
 #Build the application
 RUN npm run deploy
