@@ -20,9 +20,7 @@ jobs:
 
     - name: Build the Docker Image
       run: docker build -t kirkflores/kiby.io:latest .
-
-    - name: Run Docker Container 
-
+      
     - name: Run Docker Container 
       run: |
         docker run --name temp_container kirkflores/kiby.io:latest
