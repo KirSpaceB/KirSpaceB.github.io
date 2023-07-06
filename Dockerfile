@@ -17,4 +17,4 @@ COPY . ./
 # RUN git remote add origin https://github.com/KirSpaceB/KirSpaceB.github.io.git
 WORKDIR /app/frontend
 #Build the application
-RUN npm run deploy
+RUN npm run build
