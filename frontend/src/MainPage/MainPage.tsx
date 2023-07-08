@@ -6,7 +6,7 @@ export const MainPage = () => {
   // When this is set to true we render a new component
   const [addToMainContext, setAddToMainContext] = useState(false)
 
-  const message = "Test";
+  const message = "Where can I find a young hard working and passionate developer?";
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,7 +20,7 @@ export const MainPage = () => {
         // Add the next character from the message
         return prevText + message.charAt(prevText.length);
       });
-    }, 20); // adjust the speed of typing here
+    }, 50); // adjust the speed of typing here
     return () => clearInterval(timer);
   }, []);
   useEffect(() => {
