@@ -12,9 +12,7 @@ RUN npm install
 WORKDIR /app
 #Copy the Source code
 COPY . ./
-#Change in WORKDIR
-# RUN git init
-# RUN git remote add origin https://github.com/KirSpaceB/KirSpaceB.github.io.git
+
 WORKDIR /app/frontend
 #Build the application
 RUN npm run build

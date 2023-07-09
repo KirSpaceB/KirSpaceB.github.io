@@ -6,7 +6,7 @@ export const MainPage = () => {
   // When this is set to true we render a new component
   const [addToMainContext, setAddToMainContext] = useState(false)
 
-  const message = "Where can I find a young hard working and passionate developer?";
+  const message = "Where can I find a young, hard working, and passionate developer?";
 
   useEffect(() => {
     const timer = setInterval(() => {
