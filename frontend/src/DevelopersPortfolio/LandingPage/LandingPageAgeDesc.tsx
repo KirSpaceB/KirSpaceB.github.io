@@ -4,7 +4,7 @@ import { AgeDesContext } from "./sharedcontext/AgeDescContext";
 export const LandingPageAgeDesc = () => {
 
   let greeting = "21yr. old software developer based in southern california.";
-  let hobbies = "full-stack development, gis-development, currently working on .NET Application with C# :D"
+  let hobbies = "full-stack development, gis-development, currently fixing css and working on mobile responsiveness for this site sorry :_)"
   const [animateTextGreeting, setAnimateTextGreeting] = useState("");
   const [animateTextHobbies, setAnimateTextHobbies] = useState("");
   const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);

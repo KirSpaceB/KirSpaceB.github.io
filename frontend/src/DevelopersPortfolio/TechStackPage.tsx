@@ -5,7 +5,7 @@ import { ProjectPageContext } from "./LandingPage/sharedcontext/ProjectPageConte
 
 
 export const TechStackPage = () => {
-  let introduction = "Here are the technogies he uses often and have developed with. From my understanding his favorite language so far is JavaScript with React as the framework. Which is crazy beecause, well you know, JavaScript.....";
+  let introduction = "Here are the technogies he uses often and have developed with. From my understanding his favorite language so far is JavaScript with React as the framework. Which is crazy because, well you know, JavaScript.....";
   const [animateText, setAnimateText] = useState("");
   const [waitAnimateText, setWaitAnimateText] = useState(false);
   const [makeButtonDisappear, setMakeButtonDisappear] = useState(true)
