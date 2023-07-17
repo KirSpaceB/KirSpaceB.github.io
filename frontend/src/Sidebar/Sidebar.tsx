@@ -5,7 +5,7 @@ export const Sidebar = () => {
 
 
   return (
-    <div className="hidden sm:flex flex-shrink-0 bg-[#252323]">
+    <nav className="hidden sm:flex flex-shrink-0 bg-[#252323] sm:relative sm:z-[10]">
       <div className="h-full w-[260px]">
         <div className="flex h-full min-h-0 flex-col">
           <nav className="flex h-full w-full flex-col p-2" aria-label="Chat History">
@@ -145,6 +145,6 @@ export const Sidebar = () => {
           </nav>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

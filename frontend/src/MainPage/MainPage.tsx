@@ -12,8 +12,16 @@ export const MainPage = () => {
   }, [isOnLoadUIFinished])
   
   return (
-    <div className="flex flex-1 flex-col justify-center items-center bg-[#373b46] sm:relative sm:right-[120px] sm:z-9">
-      {isOnLoadUIFinished ? <Answer/> : <OnLoadUI/>}
+    <div className="flex flex-1 flex-col justify-center items-center bg-[#373b46]">
+      {isOnLoadUIFinished ?
+        <div className="overflow-y-scroll w-screen h-screen">
+          <Answer/> 
+        </div>
+        :
+        <div className="flex flex-1 flex-col justify-center items-center sm:relative sm:right-[120px] sm:z-9">
+          <OnLoadUI/>
+        </div>
+      }
     </div>
   )
 }
