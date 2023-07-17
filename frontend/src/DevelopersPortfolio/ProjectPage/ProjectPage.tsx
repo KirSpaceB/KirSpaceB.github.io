@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { ProjectPageContext } from "../LandingPage/sharedcontext/ProjectPageContext";
+import { ProjectPageContext } from "../LandingPage/context/ProjectPageContext";
 import { RobotLogo } from "../techstackicons";
 import MazeSolverVid from "./ProjectPageVideos/MazeSolverVideo.mp4";
 import GisMapVid from "./ProjectPageVideos/Gismap.mp4";

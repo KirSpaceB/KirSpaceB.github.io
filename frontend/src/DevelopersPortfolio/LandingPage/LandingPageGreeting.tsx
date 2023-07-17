@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { AgeDesContext } from "./sharedcontext/AgeDescContext";
-import { TechStackContext } from "./sharedcontext/TechStackContext";
+import { AgeDesContext } from "./context/AgeDescContext";
+import { TechStackContext } from "./context/TechStackContext";
 import MeWithLongHair  from "../../shared/images/Screenshot 2023-04-26 at 2.21.33 PM.png"
 export const LandingPageGreeting = () => {
   const {isGreetingFinished} = useContext(AgeDesContext);

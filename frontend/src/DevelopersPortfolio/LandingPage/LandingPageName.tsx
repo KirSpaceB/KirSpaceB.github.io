@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { IRendered } from "./sharedtypes/isRenderedType";
-import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
+import { LandingPageNameContext } from "./context/LandingPageNameContext";
 export const LandingPageName = ({isRendered}:IRendered) => {
   let introduction = "Kirk Flores";
   const [animateText, setAnimateText] = useState("");

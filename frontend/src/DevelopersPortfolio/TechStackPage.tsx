@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { RobotLogo, TypeScriptLogo, JavaScriptLogo, MySQLIcon, ReactIcon, JestIcon, PythonIcon, TailwindIcon, CSharpIcon, AWSIcon, JqueryIcon, BootstrapIcon, VITEIcon, FlaskIcon, HTMLIcon,DockerIcon,GitHubIcon } from "./techstackicons";
-import { TechStackContext } from "./LandingPage/sharedcontext/TechStackContext";
-import { ProjectPageContext } from "./LandingPage/sharedcontext/ProjectPageContext";
+import { TechStackContext } from "./LandingPage/context/TechStackContext";
+import { ProjectPageContext } from "./LandingPage/context/ProjectPageContext";
 
 
 export const TechStackPage = () => {

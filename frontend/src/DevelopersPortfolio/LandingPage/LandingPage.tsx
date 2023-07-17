@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageAgeDesc } from "./LandingPageAgeDesc";
-import { LandingPageNameContextProvider } from "./sharedcontext/LandingPageNameContext";
-import { LandingPageAgeLocationContextProvider } from "./sharedcontext/AgeDescContext";
-import { ProjectPageContextProvider } from "./sharedcontext/ProjectPageContext";
+import { LandingPageNameContextProvider } from "./context/LandingPageNameContext";
+import { LandingPageAgeLocationContextProvider } from "./context/AgeDescContext";
+import { ProjectPageContextProvider } from "./context/ProjectPageContext";
 import { LandingPageGreeting } from "./LandingPageGreeting";
-import { TechStackContextProvider } from "./sharedcontext/TechStackContext";
+import { TechStackContextProvider } from "./context/TechStackContext";
 import { ProjectPage } from "../ProjectPage/ProjectPage";
 export const LandingPage = () => {
 

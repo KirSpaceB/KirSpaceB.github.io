@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
-import { LandingPageNameContext } from "./sharedcontext/LandingPageNameContext";
-import { AgeDesContext } from "./sharedcontext/AgeDescContext";
+import { LandingPageNameContext } from "./context/LandingPageNameContext";
+import { AgeDesContext } from "./context/AgeDescContext";
 export const LandingPageAgeDesc = () => {
 
   let greeting = "21yr. old software developer based in southern california.";
