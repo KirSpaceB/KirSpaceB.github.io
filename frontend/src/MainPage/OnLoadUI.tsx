@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { MainPageContext } from "./context/MainPageContext";
 import { GPT3Logo } from "./svg/GPT3Logo";
 import { GPT4Logo } from "./svg/GPT4Logo";
 import { InputBoxArrowLogo } from "./svg/InputBoxArrowLogo";
 
 export const OnLoadUI = () => {
   const [text,setText] = useState("");
-  // When this is set to true we render a new component
-  const [addToMainContext, setAddToMainContext] = useState(false)
 
   const message = "Where can I find a young, hard working, and passionate developer?";
+  const mainPageContext = useContext(MainPageContext);
+  const {setIsOnLoadUIFinished} = mainPageContext;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -16,7 +17,8 @@ export const OnLoadUI = () => {
         // If all characters have been added, stop the interval
         if (prevText.length === message.length) {
           clearInterval(timer);
-          setAddToMainContext(true)
+          // We need to do this in Order to prevent violating the React Hooks rule of having side effects
+          setTimeout(() => setIsOnLoadUIFinished(true), 0)
           return prevText;
         }
         // Add the next character from the message
@@ -25,9 +27,7 @@ export const OnLoadUI = () => {
     }, 35); // adjust the speed of typing here
       return () => clearInterval(timer);
     }, []);
-    useEffect(() => {
-      console.log(addToMainContext)
-    },[addToMainContext])
+
   return (
     <>
      <div className="mb-auto" aria-label="GPT Logos">
