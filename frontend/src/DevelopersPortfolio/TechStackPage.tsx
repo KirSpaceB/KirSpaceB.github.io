@@ -47,7 +47,7 @@ export const TechStackPage = () => {
             {animateText}
           </div>
 
-          <div className="mr-[200px]">
+          <div className="">
             {waitAnimateText && 
               <div className="flex flex-col space-y-6 justify-center items-center">
                 <div className="flex flex-row w-[48px] h-[48px] justify-center items-center">
