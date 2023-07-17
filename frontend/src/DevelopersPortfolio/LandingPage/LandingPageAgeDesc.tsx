@@ -47,8 +47,8 @@ export const LandingPageAgeDesc = () => {
 
   return (
     <>
-      <p>{animateTextGreeting}</p>
-      <p>{animateTextHobbies}</p>
+      <p className="text-center justify-center sm:text-left sm:justify-start">{animateTextGreeting}</p>
+      <p className="text-center justify-center sm:">{animateTextHobbies}</p>
     </>
   )
 }

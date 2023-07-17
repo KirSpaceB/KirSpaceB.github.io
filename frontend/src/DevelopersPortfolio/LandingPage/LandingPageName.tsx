@@ -26,7 +26,7 @@ export const LandingPageName = ({isRendered}:IRendered) => {
   return (
     <>
       {isRendered && 
-        <h1 className="text-4xl">{animateText}</h1>    
+        <h1 className="text-4xl justify-center text-center sm:text-start sm:justify-start">{animateText}</h1>    
       }
     </>
   )

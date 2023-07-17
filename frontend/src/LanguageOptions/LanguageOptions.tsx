@@ -8,7 +8,7 @@ export const LanguageOptions = () => {
   };
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-row gap-4 justify-center items-center">
+      <div className="flex flex-row gap-2 justify-center items-center sm:gap-4">
         <button className="border-2" onClick={handleClick}>
           <div className="flex w-[100px] text-center justify-center"> English? </div>
         </button>
