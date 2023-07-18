@@ -24,7 +24,7 @@ export const OnLoadUI = () => {
         // Add the next character from the message
         return prevText + message.charAt(prevText.length);
       });
-    }, 25); // adjust the speed of typing here
+    }, 40); // adjust the speed of typing here
       return () => clearInterval(timer);
     }, []);
 
