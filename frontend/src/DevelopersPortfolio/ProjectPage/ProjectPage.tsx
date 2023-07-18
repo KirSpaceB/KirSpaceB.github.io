@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react";
-import { ProjectPageContext } from "../LandingPage/sharedcontext/ProjectPageContext";
+import { ProjectPageContext } from "../LandingPage/context/ProjectPageContext";
 import { RobotLogo } from "../techstackicons";
 import MazeSolverVid from "./ProjectPageVideos/MazeSolverVideo.mp4";
 import GisMapVid from "./ProjectPageVideos/Gismap.mp4";
@@ -43,7 +43,7 @@ export const ProjectPage = () => {
               {animateText}
             </div>
             {isAnimateTextFinished ? 
-                <div className="flex flex-row gap-4 space-x-12 justify-center items-center">
+                <div className="flex flex-col gap-4 space-x-12 justify-center items-center sm:flex-row" >
 
                 <div className="flex flex-col justify-center align-center space-y-2">
                   <h1 className="flex justify-center align-center text-center">

@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { RobotLogo, TypeScriptLogo, JavaScriptLogo, MySQLIcon, ReactIcon, JestIcon, PythonIcon, TailwindIcon, CSharpIcon, AWSIcon, JqueryIcon, BootstrapIcon, VITEIcon, FlaskIcon, HTMLIcon,DockerIcon,GitHubIcon } from "./techstackicons";
-import { TechStackContext } from "./LandingPage/sharedcontext/TechStackContext";
-import { ProjectPageContext } from "./LandingPage/sharedcontext/ProjectPageContext";
+import { TechStackContext } from "./LandingPage/context/TechStackContext";
+import { ProjectPageContext } from "./LandingPage/context/ProjectPageContext";
 
 
 export const TechStackPage = () => {
@@ -47,7 +47,7 @@ export const TechStackPage = () => {
             {animateText}
           </div>
 
-          <div className="mr-[200px]">
+          <div className="">
             {waitAnimateText && 
               <div className="flex flex-col space-y-6 justify-center items-center">
                 <div className="flex flex-row w-[48px] h-[48px] justify-center items-center">

@@ -20,11 +20,11 @@ export const Answer = () => {
   }, []);
 
   return (
-    <div className="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
-      <div className="flex p-4 gap-4 text-base md:gap-6 md:max-w-2xl lg:max-w-[38rem] xl:max-w-3xl md:py-6 lg:px-0 m-auto">
-        <div className="flex-shrink-0 flex flex-col relative items-end">
+    <div className="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654] relative ">
+      <div className="flex p-4 gap-4 text-base md:gap-6 sm:max-w-3xl sm:py-6 sm:px-0 m-auto">
+        <div className="flex-shrink-0 flex flex-col items-end">
           <div className="w-[30px]">
-            <div className="relative p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
+            <div className=" p-1 rounded-sm h-[30px] w-[30px] text-white flex items-center justify-center bg-red-500">
               <img className="w-full h-full" src={RobotLogo} alt="Check Answer.tsx img tag with robotlogo"/>
             </div>
           </div>

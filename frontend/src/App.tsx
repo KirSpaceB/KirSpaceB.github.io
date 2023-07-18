@@ -1,12 +1,15 @@
 import { Sidebar } from "./Sidebar/Sidebar";
 import { MainPage } from "./MainPage/MainPage";
+import { MainPageContextProvider } from "./MainPage/context/MainPageContext";
 
 const App = () => {
   return (
-    <div className="overflow-hidden w-screen h-screen relative flex z-0">
-      <Sidebar/>
-      <MainPage/>
-    </div>
+    <MainPageContextProvider>
+      <div className="flex overflow-x-hidden w-screen h-screen">
+        <Sidebar/>
+        <MainPage/>
+      </div>
+    </MainPageContextProvider>
   )
 }
 
