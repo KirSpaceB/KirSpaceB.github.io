@@ -18,7 +18,7 @@ export const MainPage = () => {
           <Answer/> 
         </div>
         :
-        <div className="flex flex-1 flex-col justify-center items-center sm:relative sm:right-[120px] sm:z-9">
+        <div className="flex flex-1 flex-col justify-center items-center sm:relative sm:z-9">
           <OnLoadUI/>
         </div>
       }
