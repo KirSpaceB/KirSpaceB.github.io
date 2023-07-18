@@ -8,7 +8,7 @@ export const InputBoxArrowLogo = () => {
         viewBox="0 0 16 16" 
         strokeLinecap="round" 
         strokeLinejoin="round" 
-        className="h-4 w-4 transition-colors text-brand-green" 
+        className="h-4 w-4 transition-colors text-brand-green mr-2" 
         height="16" 
         width="16" 
         xmlns="http://www.w3.org/2000/svg"
