@@ -1,5 +1,5 @@
 import { Answer } from "../Answer/Answer";
-import { OnLoadUI } from "./OnLoadUI";
+import { OnLoadUI } from "./OnLoadUIFolder/OnLoadUI";
 
 import { MainPageContext } from "./context/MainPageContext";
 import { useContext, useEffect } from "react";
