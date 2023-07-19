@@ -20,7 +20,8 @@ export const Answer = () => {
   }, []);
 
   return (
-    <div className="grandparent-div-for-this-component group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654] relative">
+    <div className="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654] relative">
+
       <div className="flex p-4 gap-4 text-base md:gap-6 sm:max-w-3xl sm:py-6 sm:px-0 m-auto">
         <div className="flex-shrink-0 flex flex-col items-end">
           <div className="w-[30px]">
