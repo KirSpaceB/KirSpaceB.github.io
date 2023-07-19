@@ -8,15 +8,15 @@ export const OnLoadUI = () => {
 
   return (
     <>
-      <div className="mb-auto" aria-label="GPT Logos">
+      <div className="pill-parent-tag mb-auto" aria-label="GPT Logos">
         <OnLoadUIPill/>
       </div>
       
-      <div className="my-auto">
+      <div className="chatgpt-plus-parent-tag my-auto">
         <ChatGPTPlusLogo/>
       </div>
       
-      <div className="mt-auto sm:w-[600px]">
+      <div className="text-area-parent-tag mt-auto sm:w-[600px]">
         <TextArea/>
       </div>
     </>
