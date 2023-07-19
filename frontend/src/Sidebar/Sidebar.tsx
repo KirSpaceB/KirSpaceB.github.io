@@ -3,6 +3,7 @@ import { TodaySection } from "./SidebarComponents/TodaySection";
 import { YesterdaySection } from "./SidebarComponents/YesterdaySection";
 import { PastThirtyDaysSection } from "./SidebarComponents/PastThirtyDaysSection";
 import { Footer } from "./SidebarComponents/Footer";
+import { FrontendSection } from "./SidebarComponents/FrontendSection";
 export const Sidebar = () => {
 
 
@@ -17,6 +18,7 @@ export const Sidebar = () => {
               <div className="flex flex-col gap-2 pb-2 text-gray-100 text-sm">
                 <div>
                   <span>
+                    <FrontendSection/>
                     <TodaySection/>
                     <YesterdaySection/>
                     <PastThirtyDaysSection/>
