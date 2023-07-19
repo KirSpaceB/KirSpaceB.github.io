@@ -29,7 +29,7 @@ export const TextArea = () => {
   }, []);
   return (
     <>
-      <div className=" flex flex-row h-[45px] border border-black/10 bg-white dark:border-gray-900/60 dark:text-white dark:bg-gray-700 rounded-xl shadow-xs dark:shadow-xs justify-center items-center ml-[20px] sm:w-full sm:justify-center sm:text-center sm:ml-[4px]">
+      <div className="flex flex-row h-[45px] border border-black/10 bg-white dark:border-gray-900/60 dark:text-white dark:bg-gray-700 rounded-xl shadow-xs dark:shadow-xs justify-center items-center ml-[20px] sm:w-full sm:justify-center sm:text-center sm:ml-[4px]">
         <textarea className="m-0 w-[300px] resize-none border-0 bg-transparent dark:bg-transparent pl-0 justify-center text-[14px] whitespace-pre-wrap sm:w-[550px] sm:pt-8" value={text}>
 
         </textarea>
