@@ -1,4 +1,4 @@
-
+// Figure out how we can make so that when the user clicks parallax design on the side bar it emulates a new page on the main section
 export const FrontendSection = () => {
   const handleClickEvent = () => {
     

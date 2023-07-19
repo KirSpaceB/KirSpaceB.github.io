@@ -1,4 +1,4 @@
-import { Dispatch,SetStateAction,ReactNode, createContext } from "react"
+import { Dispatch,SetStateAction,ReactNode, createContext, useState } from "react"
 
 interface IFrontendSection {
   didUserclickParallaxDesignOnSideBar: boolean,
@@ -15,8 +15,9 @@ const FrontendSectionContext = createContext<IFrontendSection>({
 })
 
 export const FrontendSectionContextProvider = ({children} : IComponentChildNode) => {
+  const [didUserclickParallaxDesignOnSideBar, setDidUserclickParallaxDesignOnSideBar] = useState(false);
   return (
-    <FrontendSectionContext.Provider value={}>
+    <FrontendSectionContext.Provider value={{didUserclickParallaxDesignOnSideBar, setDidUserclickParallaxDesignOnSideBar}}>
       {children}
     </FrontendSectionContext.Provider>
   )
