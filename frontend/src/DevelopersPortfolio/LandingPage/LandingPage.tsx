@@ -12,6 +12,8 @@ import { ProjectPage } from "../ProjectPage/ProjectPage";
 export const LandingPage = () => {
 
   let introduction = "Here is an introduction of who he is and some of his hobbies.";
+  // Can be put inside its own hook
+  // We can create custom inside ts file thats shared
   const [animateText, setAnimateText] = useState("");
   const [isTextComplete, setIsTextComplete] = useState(false);
 
@@ -28,6 +30,7 @@ export const LandingPage = () => {
     }, 10);
     return () => clearInterval(timer);
   }, []);
+  // Put in a hook
 
   return (
     <ProjectPageContextProvider>
