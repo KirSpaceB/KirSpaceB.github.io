@@ -3,7 +3,8 @@ import { TodaySection } from "./SidebarComponents/TodaySection";
 import { YesterdaySection } from "./SidebarComponents/YesterdaySection";
 import { PastThirtyDaysSection } from "./SidebarComponents/PastThirtyDaysSection";
 import { Footer } from "./SidebarComponents/Footer";
-import { FrontendSection } from "./SidebarComponents/FrontendSection";
+import { FrontendSection } from "./FrontendSection";
+import { FullStackSectionSidebar } from "./SidebarComponents/FullStackProjectSection";
 export const Sidebar = () => {
 
 
@@ -19,6 +20,7 @@ export const Sidebar = () => {
                 <div>
                   <span>
                     <FrontendSection/>
+                    <FullStackSectionSidebar/>
                     <TodaySection/>
                     <YesterdaySection/>
                     <PastThirtyDaysSection/>

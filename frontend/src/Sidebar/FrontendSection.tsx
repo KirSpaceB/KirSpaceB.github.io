@@ -1,7 +1,14 @@
 // Figure out how we can make so that when the user clicks parallax design on the side bar it emulates a new page on the main section
+import { useContext } from "react"
+import { FrontendSectionContext } from "./SidebarComponents/FrontendSectionContext/Context"
+import { MainPageContext } from "../MainPage/context/MainPageContext";
+
 export const FrontendSection = () => {
+  const {setDidUserclickParallaxDesignOnSideBar} = useContext(FrontendSectionContext);
+  const {setIsOnLoadUIFinished} = useContext(MainPageContext)
   const handleClickEvent = () => {
-    
+    setIsOnLoadUIFinished(false)
+    setDidUserclickParallaxDesignOnSideBar(true)
   }
   return (
     <div className="relative h-auto opacity-1">

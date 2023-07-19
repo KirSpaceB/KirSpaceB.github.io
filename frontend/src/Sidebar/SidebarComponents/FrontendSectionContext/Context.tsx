@@ -9,7 +9,7 @@ interface IComponentChildNode {
   children:ReactNode
 }
 
-const FrontendSectionContext = createContext<IFrontendSection>({
+export const FrontendSectionContext = createContext<IFrontendSection>({
     didUserclickParallaxDesignOnSideBar:false,
     setDidUserclickParallaxDesignOnSideBar: () => undefined
 })
