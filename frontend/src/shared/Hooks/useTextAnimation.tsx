@@ -4,6 +4,7 @@ interface IUseTextAnimationArgs {
   message:string,
   speed?:number,
   callbackFnForDestructContext?: () => void
+}
 
 interface IUseTextAnimationReturnType {
   animatedText: string;
@@ -15,7 +16,7 @@ interface IUseTextAnimationReturnType {
 export default function useTextAnimation({
   message,
   speed = 40,
-  FunctionToTriggerUseContext
+  callbackFnForDestructContext
   }: IUseTextAnimationArgs): IUseTextAnimationReturnType {
     
   const [animatedText, setAnimatedText] = useState('');
@@ -28,9 +29,7 @@ export default function useTextAnimation({
           clearInterval(timer);
           // We need to do this in Order to prevent violating the React Hooks rule of having side effects
           setTimeout(() => {
-
             if(callbackFnForDestructContext) callbackFnForDestructContext();
-
           }, 0)
           return prevText
         }
