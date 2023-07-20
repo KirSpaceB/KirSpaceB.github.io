@@ -3,13 +3,14 @@ import { useState, useEffect } from "react";
 interface IUseTextAnimationArgs {
   message:string,
   speed?:number,
-  FunctionToTriggerUseContext: () => void
-}
+  callbackFnForDestructContext?: () => void
 
 interface IUseTextAnimationReturnType {
   animatedText: string;
 }
 
+
+// Pass in a variable containing a string and it will animate it on the ui at a fixed speed of 40 milliseconds(can be change). The callbackFn is used to trigger a Set State fn from a Context to trigger the rendering of another UI.
 
 export default function useTextAnimation({
   message,
@@ -27,7 +28,9 @@ export default function useTextAnimation({
           clearInterval(timer);
           // We need to do this in Order to prevent violating the React Hooks rule of having side effects
           setTimeout(() => {
-            if(FunctionToTriggerUseContext) FunctionToTriggerUseContext();
+
+            if(callbackFnForDestructContext) callbackFnForDestructContext();
+
           }, 0)
           return prevText
         }
@@ -37,6 +40,6 @@ export default function useTextAnimation({
 
     // Without this we lose control of the speed variable
     return () => clearInterval(timer);
-  },[message, speed, FunctionToTriggerUseContext])
+  },[])
   return {animatedText}
 }
