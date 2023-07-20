@@ -9,9 +9,10 @@ export const TextArea = () => {
   const mainPageContext = useContext(MainPageContext);
   const {setIsOnLoadUIFinished} = mainPageContext;
 
-  const {animatedText} = useTextAnimation({
-    message:message,
-    FunctionToTriggerUseContext: () => setIsOnLoadUIFinished(true)
+  const {animatedText} = useTextAnimation(
+    {
+    message,
+    callbackFnForDestructContext: () => setIsOnLoadUIFinished(true)
     })
 
   return (
@@ -28,6 +29,5 @@ export const TextArea = () => {
         </span>
       </div>
     </>
-
   )
 }
