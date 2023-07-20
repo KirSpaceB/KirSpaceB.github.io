@@ -9,16 +9,10 @@ export const TextArea = () => {
   const mainPageContext = useContext(MainPageContext);
   const {setIsOnLoadUIFinished} = mainPageContext;
 
-<<<<<<< HEAD
   const {animatedText} = useTextAnimation(
     {
     message,
     callbackFnForDestructContext: () => setIsOnLoadUIFinished(true)
-=======
-  const {animatedText} = useTextAnimation({
-    message:message,
-    FunctionToTriggerUseContext: () => setIsOnLoadUIFinished(true)
->>>>>>> 5547432 (Create custom hook for animation (#17))
     })
 
   return (
