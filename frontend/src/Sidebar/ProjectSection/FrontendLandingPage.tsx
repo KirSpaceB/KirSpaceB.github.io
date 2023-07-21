@@ -1,6 +1,6 @@
 
-export const FrontendLandingPage = () => {
+export const WebDesignLandingPage = () => {
   return (
-    <div>Frontend Landing Page</div>
+    <div>Web Design Landing Page</div>
   )
 }

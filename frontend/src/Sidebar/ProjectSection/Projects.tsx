@@ -1,7 +1,7 @@
 
 
 import { FrontendListComponent } from "./FrontendListComponent";
-import { BackendLIComponent } from "./BackendLIComponent";
+import { BackendLIComponent } from "./FullStackSidebar";
 
 export const Projects = () => {
 
