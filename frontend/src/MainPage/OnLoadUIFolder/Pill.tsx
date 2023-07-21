@@ -1,3 +1,4 @@
+import { SvgComponent } from "../../shared/SvgComponent"
 import { GPT3Logo } from "../svg/GPT3Logo"
 import { GPT4Logo } from "../svg/GPT4Logo"
 
@@ -13,7 +14,7 @@ export const OnLoadUIPill = () => {
         <li className="flex-grow">
           <div className="flex justify-center items-center gap-3 rounded-lg border py-3 text-gray-900 bg-white outline-none border-black/10 dark:border-[#4E4F60] dark:bg-gray-700 dark:text-gray-100">
             <span>
-              <GPT3Logo/>
+              <SvgComponent icon={GPT3Logo}/>
             </span>
             <span className="truncate text-sm font-medium pr-1.5 sm:pr-1.5">
               GPT-3.5
@@ -23,7 +24,7 @@ export const OnLoadUIPill = () => {
         <li className="flex-grow">
           <div className="flex justify-center items-center gap-3 rounded-lg py-3">
             <span>
-              <GPT4Logo/>
+              <SvgComponent icon={GPT4Logo}/>
             </span>
             <span className="truncate text-sm font-medium pr-1.5 sm:pr-1.5 text-gray-500">
               GPT-4.0

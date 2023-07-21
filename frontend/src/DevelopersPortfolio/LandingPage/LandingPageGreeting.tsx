@@ -3,6 +3,7 @@ import { AgeDesContext } from "./context/AgeDescContext";
 import { TechStackContext } from "./context/TechStackContext";
 import MeWithLongHair  from "../../shared/images/Screenshot 2023-04-26 at 2.21.33 PM.png"
 import { ContinueGeneratingArrow } from "./LandingPageSvgs/ContinueGeneratingArrow";
+import { SvgComponent } from "../../shared/SvgComponent";
 export const LandingPageGreeting = () => {
   const {isGreetingFinished} = useContext(AgeDesContext);
   const {setIsAgeLocationFinished} = useContext(TechStackContext);
@@ -50,7 +51,7 @@ export const LandingPageGreeting = () => {
         <div className="relative right-[20px] justify-center items-center my-10">
 
           <button className="flex flex-row text-xs p-2 items-center cursor-pointer rounded-md border border-white/20" onClick={buttonHandler}>
-            <ContinueGeneratingArrow/>
+            <SvgComponent icon={ContinueGeneratingArrow}/>
             Continue Generating?
           </button>
           
