@@ -1,13 +1,13 @@
 import { useContext } from "react"
-import { FrontendSectionContext } from "../SidebarComponents/FrontendSectionContext/Context"
+import { FrontendSectionContext } from "../SidebarComponents/FrontendSectionContext/FrontendSectionContext"
 import { MainPageContext } from "../../MainPage/context/MainPageContext";
 import { MessageIcon } from "../svg/MessageIcon";
 export const FrontendListComponent = () => {
-  const {setDidUserclickParallaxDesignOnSideBar} = useContext(FrontendSectionContext);
+  const {setDidUserClickFrontend} = useContext(FrontendSectionContext);
   const {setIsOnLoadUIFinished} = useContext(MainPageContext)
   const handleClickEvent = () => {
     setIsOnLoadUIFinished(false)
-    setDidUserclickParallaxDesignOnSideBar(true)
+    setDidUserClickFrontend(true)
   }
 
   return (
@@ -18,6 +18,6 @@ export const FrontendListComponent = () => {
           Frontend
         </div>
       </div>
-  </li>
+    </li>
   )
 }
