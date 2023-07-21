@@ -3,7 +3,7 @@ import { OnLoadUI } from "./OnLoadUIFolder/OnLoadUI";
 import { MainPageContext } from "./context/MainPageContext";
 import { WebDesignSectionContext } from "../Sidebar/Context/WebDesignSectionContext/WebDesignSectionContext";
 import { useContext, useEffect } from "react";
-import { WebDesignLandingPage } from "../Sidebar/ProjectSection/FrontendLandingPage";
+import { WebDesignLandingPage } from "../Sidebar/ProjectSection/WebDesignLandingPage";
 import { FullStackLandingPage } from "../Sidebar/ProjectSection/FullStackLandingPage";
 import { FullStackSectionContext } from "../Sidebar/Context/FullStackSection/FullStackSection";
 
@@ -22,14 +22,10 @@ export const MainPage = () => {
     <div className="flex flex-1 flex-col justify-center items-center bg-[#373b46]">
       {
         didUserClickWebDesign ? 
-          <div>
-            <WebDesignLandingPage/>
-          </div>
+          <WebDesignLandingPage/>
         :
         didUserClickFullStackSection ? 
-          <div>
-            <FullStackLandingPage/>
-          </div>
+          <FullStackLandingPage/>
           :
           isOnLoadUIFinished ?
             <div className="overflow-y-scroll w-screen h-screen">
