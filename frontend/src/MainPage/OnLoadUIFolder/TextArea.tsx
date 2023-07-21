@@ -2,6 +2,7 @@ import { InputBoxArrowLogo } from "../svg/InputBoxArrowLogo";
 import { useContext } from "react";
 import { MainPageContext } from "../context/MainPageContext";
 import useTextAnimation from "../../shared/Hooks/useTextAnimation";
+import { SvgComponent } from "../../shared/SvgComponent";
 
 export const TextArea = () => {
 
@@ -27,7 +28,7 @@ export const TextArea = () => {
         >
 
         </textarea>
-        <InputBoxArrowLogo/>
+        <SvgComponent icon={InputBoxArrowLogo}/>
       </div>
       <div className="px-3 pb-3 pt-2 text-center text-xs text-gray-600 dark:text-gray-300">
         <span>
