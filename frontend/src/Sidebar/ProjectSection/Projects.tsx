@@ -1,7 +1,6 @@
 
-
-import { FrontendListComponent } from "./FrontendListComponent";
-import { BackendLIComponent } from "./FullStackSidebar";
+import { WebDesignSidebar } from "./WebDesignSidebar";
+import { FullStackSidebar } from "./FullStackSidebar";
 
 export const Projects = () => {
 
@@ -13,8 +12,8 @@ export const Projects = () => {
         </h3>
       </div>
       <ol>
-        <FrontendListComponent/>
-        <BackendLIComponent/>
+        <WebDesignSidebar/>
+        <FullStackSidebar/>
       </ol>
     </div>
   )

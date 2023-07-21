@@ -5,7 +5,7 @@ import { MessageIcon } from "../svg/MessageIcon";
 import { FullStackSectionContext } from "../Context/FullStackSection/FullStackSection";
 import { WebDesignSectionContext } from "../Context/WebDesignSectionContext/WebDesignSectionContext";
 
-export const BackendLIComponent = () => {
+export const FullStackSidebar = () => {
   //Context
   const {setDidUserClickFullStackSection} = useContext(FullStackSectionContext);
   const {setDidUserClickWebDesign} = useContext(WebDesignSectionContext)

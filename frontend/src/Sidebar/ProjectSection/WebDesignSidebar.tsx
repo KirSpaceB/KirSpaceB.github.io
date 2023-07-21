@@ -3,7 +3,7 @@ import { WebDesignSectionContext } from "../Context/WebDesignSectionContext/WebD
 import { MainPageContext } from "../../MainPage/context/MainPageContext";
 import { MessageIcon } from "../svg/MessageIcon";
 
-export const FrontendListComponent = () => {
+export const WebDesignSidebar = () => {
   const {setDidUserClickWebDesign} = useContext(WebDesignSectionContext);
   const {setIsOnLoadUIFinished} = useContext(MainPageContext)
   const handleClickEvent = () => {
