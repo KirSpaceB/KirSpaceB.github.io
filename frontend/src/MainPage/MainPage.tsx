@@ -5,15 +5,13 @@ import { FrontendSectionContext } from "../Sidebar/SidebarComponents/FrontendSec
 import { FullStackSectionContext } from "../Sidebar/SidebarComponents/FullStackSectionContext/FullStackSectionContext";
 
 import { useContext, useEffect } from "react";
-import { LandingPage } from "../DevelopersPortfolio/FrontendWorks/LandingPage";
-import { FullStackLandingPage } from "../DevelopersPortfolio/FullStackWorks/FullStackLandingPage";
+import { LandingPage } from "../Sidebar/ProjectSection/LandingPage";
 
 export const MainPage = () => {
   // context
   const mainPageContext = useContext(MainPageContext);
   const {isOnLoadUIFinished} = mainPageContext;
   const {didUserclickParallaxDesignOnSideBar} = useContext(FrontendSectionContext)
-  const {didUserClickFullStackSection} = useContext(FullStackSectionContext)
 
   useEffect(() => {
     console.log("🚀 ~ file: MainPage.tsx:9 ~ MainPage ~ isOnLoadUIFinished:", isOnLoadUIFinished)
@@ -25,11 +23,6 @@ export const MainPage = () => {
         didUserclickParallaxDesignOnSideBar ? 
           <div>
             <LandingPage/>
-          </div>
-        :
-        didUserClickFullStackSection ? 
-          <div>
-            <FullStackLandingPage/>
           </div>
         :
         isOnLoadUIFinished ?
