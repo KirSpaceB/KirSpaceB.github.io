@@ -1,19 +1,18 @@
 import { Answer } from "../Answer/Answer";
 import { OnLoadUI } from "./OnLoadUIFolder/OnLoadUI";
 import { MainPageContext } from "./context/MainPageContext";
-import { FrontendSectionContext } from "../Sidebar/Context/FrontendSectionContext/FrontendSectionContext";
-import { BackendSectionContext } from "../Sidebar/Context/BackendSectionContext/BackendSectionContext";
-
+import { WebDesignSectionContext } from "../Sidebar/Context/WebDesignSectionContext/WebDesignSectionContext";
 import { useContext, useEffect } from "react";
-import { FrontendLandingPage } from "../Sidebar/ProjectSection/FrontendLandingPage";
-import { BackendLandingPage } from "../Sidebar/ProjectSection/BackendLandingPage";
+import { WebDesignLandingPage } from "../Sidebar/ProjectSection/WebDesignLandingPage";
+import { FullStackLandingPage } from "../Sidebar/ProjectSection/FullStackLandingPage";
+import { FullStackSectionContext } from "../Sidebar/Context/FullStackSection/FullStackSection";
 
 export const MainPage = () => {
   // context
   const mainPageContext = useContext(MainPageContext);
   const {isOnLoadUIFinished} = mainPageContext;
-  const {didUserClickFrontend} = useContext(FrontendSectionContext)
-  const {didUserClickBackendSection} = useContext(BackendSectionContext)
+  const {didUserClickWebDesign} = useContext(WebDesignSectionContext)
+  const {didUserClickFullStackSection} = useContext(FullStackSectionContext)
 
   useEffect(() => {
     console.log("🚀 ~ file: MainPage.tsx:9 ~ MainPage ~ isOnLoadUIFinished:", isOnLoadUIFinished)
@@ -22,15 +21,11 @@ export const MainPage = () => {
   return (
     <div className="flex flex-1 flex-col justify-center items-center bg-[#373b46]">
       {
-        didUserClickFrontend ? 
-          <div>
-            <FrontendLandingPage/>
-          </div>
+        didUserClickWebDesign ? 
+          <WebDesignLandingPage/>
         :
-        didUserClickBackendSection ? 
-          <div>
-            <BackendLandingPage/>
-          </div>
+        didUserClickFullStackSection ? 
+          <FullStackLandingPage/>
           :
           isOnLoadUIFinished ?
             <div className="overflow-y-scroll w-screen h-screen">
