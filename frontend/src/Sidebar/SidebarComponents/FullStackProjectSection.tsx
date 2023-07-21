@@ -1,6 +1,6 @@
 
 import { useContext } from "react"
-import { FullStackSectionContext } from "./BackendSectionContext/BackendSectionContext";
+import { FullStackSectionContext } from "../Context/BackendSectionContext/BackendSectionContext";
 import { MainPageContext } from "../../MainPage/context/MainPageContext";
 export const FullStackSectionSidebar = () => {
   const {setDidUserClickFullStackSection} = useContext(FullStackSectionContext);

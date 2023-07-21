@@ -2,8 +2,8 @@
 import { useContext } from "react"
 import { MainPageContext } from "../../MainPage/context/MainPageContext";
 import { MessageIcon } from "../svg/MessageIcon";
-import { BackendSectionContext } from "../SidebarComponents/BackendSectionContext/BackendSectionContext";
-import { FrontendSectionContext } from "../SidebarComponents/FrontendSectionContext/FrontendSectionContext";
+import { BackendSectionContext } from "../Context/BackendSectionContext/BackendSectionContext";
+import { FrontendSectionContext } from "../Context/FrontendSectionContext/FrontendSectionContext";
 
 export const BackendLIComponent = () => {
   //Context

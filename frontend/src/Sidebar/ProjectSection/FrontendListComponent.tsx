@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { FrontendSectionContext } from "../SidebarComponents/FrontendSectionContext/FrontendSectionContext"
+import { FrontendSectionContext } from "../Context/FrontendSectionContext/FrontendSectionContext"
 import { MainPageContext } from "../../MainPage/context/MainPageContext";
 import { MessageIcon } from "../svg/MessageIcon";
 export const FrontendListComponent = () => {

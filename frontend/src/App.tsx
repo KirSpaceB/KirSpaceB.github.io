@@ -1,8 +1,8 @@
 import { Sidebar } from "./Sidebar/Sidebar";
 import { MainPage } from "./MainPage/MainPage";
 import { MainPageContextProvider } from "./MainPage/context/MainPageContext";
-import { FrontendSectionContextProvider } from "./Sidebar/SidebarComponents/FrontendSectionContext/FrontendSectionContext";
-import { BackendSectionContextProvider } from "./Sidebar/SidebarComponents/BackendSectionContext/BackendSectionContext";
+import { FrontendSectionContextProvider } from "./Sidebar/Context/FrontendSectionContext/FrontendSectionContext";
+import { BackendSectionContextProvider } from "./Sidebar/Context/BackendSectionContext/BackendSectionContext";
 
 const App = () => {
   return (

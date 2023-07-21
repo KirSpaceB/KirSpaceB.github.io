@@ -1,8 +1,8 @@
 import { Answer } from "../Answer/Answer";
 import { OnLoadUI } from "./OnLoadUIFolder/OnLoadUI";
 import { MainPageContext } from "./context/MainPageContext";
-import { FrontendSectionContext } from "../Sidebar/SidebarComponents/FrontendSectionContext/FrontendSectionContext";
-import { BackendSectionContext } from "../Sidebar/SidebarComponents/BackendSectionContext/BackendSectionContext";
+import { FrontendSectionContext } from "../Sidebar/Context/FrontendSectionContext/FrontendSectionContext";
+import { BackendSectionContext } from "../Sidebar/Context/BackendSectionContext/BackendSectionContext";
 
 import { useContext, useEffect } from "react";
 import { FrontendLandingPage } from "../Sidebar/ProjectSection/FrontendLandingPage";
