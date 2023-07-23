@@ -39,7 +39,7 @@ export const LandingPageGreeting = () => {
   return (
     <div className="flex flex-col justify-center items-center space-x-16">
       <div className="flex flex-col sm:flex-row sm:items-center">
-        <h1 className = "justify-center text-center sm:w-[300px] sm:h-[100px]">
+        <h1 className = "justify-center sm:w-[300px] sm:h-[100px]">
           {ahoyThereAnimation}
         </h1>
         {isAnimatedTextFinished ?
