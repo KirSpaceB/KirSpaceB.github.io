@@ -1,4 +1,4 @@
-import Resume from '../../../public/Resume.pdf'
+import Resume from '../../../public/2023-07-22 Kirk Flores Resume.pdf'
 import { SvgComponent } from '../../shared/SvgComponent'
 import { Message } from '../svg/Message'
 export const TodaySection = () => {
