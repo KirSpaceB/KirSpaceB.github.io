@@ -15,7 +15,7 @@ interface IUseTextAnimationReturnType {
 
 export default function useTextAnimation({
   message,
-  speed = 40,
+  speed = 5,
   callbackFnForDestructContext
   }: IUseTextAnimationArgs): IUseTextAnimationReturnType {
     

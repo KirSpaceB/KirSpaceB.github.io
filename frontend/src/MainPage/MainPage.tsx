@@ -3,7 +3,7 @@ import { OnLoadUI } from "./OnLoadUIFolder/OnLoadUI";
 import { MainPageContext } from "./context/MainPageContext";
 import { WebDesignSectionContext } from "../Sidebar/Context/WebDesignSectionContext/WebDesignSectionContext";
 import { useContext, useEffect } from "react";
-import { WebDesignLandingPage } from "../Sidebar/ProjectSection/WebDesignLandingPage";
+import { WebDesignLandingPage } from "../WebDesignLandingPage/WebDesignLandingPage";
 import { FullStackLandingPage } from "../Sidebar/ProjectSection/FullStackLandingPage";
 import { FullStackSectionContext } from "../Sidebar/Context/FullStackSection/FullStackSection";
 
@@ -21,7 +21,7 @@ export const MainPage = () => {
   return (
     <div className="flex flex-1 flex-col justify-center items-center bg-[#373b46]">
       {
-        didUserClickWebDesign ? 
+        didUserClickWebDesign ?
           <WebDesignLandingPage/>
         :
         didUserClickFullStackSection ? 
