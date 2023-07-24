@@ -4,7 +4,7 @@ import { MainPageContext } from "./context/MainPageContext";
 import { WebDesignSectionContext } from "../Sidebar/Context/WebDesignSectionContext/WebDesignSectionContext";
 import { useContext, useEffect } from "react";
 import { WebDesignLandingPage } from "../WebDesignLandingPage/WebDesignLandingPage";
-import { FullStackLandingPage } from "../Sidebar/ProjectSection/FullStackLandingPage";
+import { FullStackLandingPage } from "../FullStackLandingPage/FullStackLandingPage";
 import { FullStackSectionContext } from "../Sidebar/Context/FullStackSection/FullStackSection";
 
 export const MainPage = () => {

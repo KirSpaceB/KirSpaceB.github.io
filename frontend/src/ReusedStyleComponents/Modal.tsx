@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import './styles/Modal.css';
-import ParalaxVideoDemo from './public/Parallax Design Video Demo.mp4'
-import { ReusedButton } from '../ReusedStyleComponents/ReusedButton';
-import { GitHubIcon } from "../DevelopersPortfolio/techstackicons"
-import { CloseModal } from '../ReusedStyleComponents/CloseModal';
+import ParalaxVideoDemo from '../../public/Parallax Design Video Demo.mp4'
+import { ReusedButton } from './ReusedButton';
+import { GitHubIcon } from '../DevelopersPortfolio/techstackicons';
+import { CloseModal } from './CloseModal';
 
 type ButtonModalProps = {
   onClose: () => void;

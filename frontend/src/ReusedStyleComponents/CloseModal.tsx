@@ -1,7 +1,7 @@
-import CloseModalICon from '.././WebDesignLandingPage/public/Close_square.svg'
+import CloseModalIcon from '../../public/Close_square.svg'
 export const CloseModal = () => {
   return (
-    <img src={CloseModalICon} className='bg-color-black'>
+    <img src={CloseModalIcon} className='bg-color-black'>
 
     </img>
   )
