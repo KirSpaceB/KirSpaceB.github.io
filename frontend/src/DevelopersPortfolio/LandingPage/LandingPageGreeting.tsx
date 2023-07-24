@@ -12,7 +12,7 @@ export const LandingPageGreeting = () => {
   const [isAnimatedTextFinished, setIsAnimatedTextFinished] = useState(false);
   const [isAhoyThereDone, setIsAhoyThereDone] = useState(false);
   const [makeButtonDisappear, setMakeButtonDisappear] = useState(true);
-  let ahoyThere = "AHOY There! Here are some of my favorite hobbies and activities: Basketball, Football, Tennis, and any physical activity!"
+  let ahoyThere = "While I'm an avid sports enthusiast, particularly enjoying basketball, football, and tennis, my true passion and where I invest the majority of my time is in the realm of software development. Balancing physical activities with cerebral challenges, I continue to expand my technical skillset, always staying at the forefront of the rapidly evolving tech industry. This unique blend of physical pursuits and intellectual dedication is the driving force behind my personal and professional growth."
 
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export const LandingPageGreeting = () => {
   return (
     <div className="flex flex-col justify-center items-center space-x-16">
       <div className="flex flex-col sm:flex-row sm:items-center">
-        <h1 className = "justify-center sm:w-[300px] sm:h-[100px]">
+        <h1 className = "justify-center sm:w-[300px] sm:h-auto">
           {ahoyThereAnimation}
         </h1>
         {isAnimatedTextFinished ?
