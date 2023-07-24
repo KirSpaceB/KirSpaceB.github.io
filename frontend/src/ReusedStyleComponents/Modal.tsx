@@ -1,15 +1,24 @@
 import { useEffect, useRef, useState } from 'react';
 import './styles/Modal.css';
-import ParalaxVideoDemo from './public/Parallax Design Video Demo.mp4'
-import { ReusedButton } from '../ReusedStyleComponents/ReusedButton';
-import { GitHubIcon } from "../DevelopersPortfolio/techstackicons"
-import { CloseModal } from '../ReusedStyleComponents/CloseModal';
+
+import { ReusedButton } from './ReusedButton';
+import { GitHubIcon } from '../DevelopersPortfolio/techstackicons';
+import { CloseModal } from './CloseModal';
 
 type ButtonModalProps = {
-  onClose: () => void;
+  onClose: () => void,
+  displayedVideo:string,
+  gitHubLink:string,
+  projectDescription:string,
 };
 
-export const Modal = ({onClose}: ButtonModalProps) => {
+export const Modal = (
+  {
+    onClose,
+    displayedVideo,
+    gitHubLink,
+    projectDescription
+  }: ButtonModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const [closing, setClosing] = useState(false);
 
@@ -40,16 +49,25 @@ export const Modal = ({onClose}: ButtonModalProps) => {
         <button id='modal_close_button' onClick={handleClose}>
           <CloseModal/>
         </button>
-        <video src={ParalaxVideoDemo} className='w-[32rem] h-auto' controls></video>
+
+        <div className="div-container-for-modal-video-tag flex justify-center items-center">
+          <video 
+            src={displayedVideo}
+            className='w-[32rem] h-auto inline-block m-0 p-0'
+            controls
+            >
+          </video>
+        </div>
+
         <div className='flex flex-row space-x-4 justify-center items-center mt-4'>
           <ReusedButton textToDisplay='Source Code' icon={GitHubIcon} 
-          link='https://github.com/KirSpaceB/LA_Mountains_Parallax_Design/blob/main/HTMLProject/index.html'
+          link={gitHubLink}
           />
           <ReusedButton textToDisplay='Live Demo'/>
         </div>
 
         <p className='flex justify-center items-center mt-4 text-white text-center'>
-          If Live demo is currently unavaible the video demonstrates the app
+          {projectDescription}
         </p>
       </div>
     </>

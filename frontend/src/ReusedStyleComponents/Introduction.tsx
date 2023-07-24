@@ -1,9 +1,12 @@
-import useTextAnimation from '../shared/Hooks/useTextAnimation';
-import { RobotLogo } from '../DevelopersPortfolio/techstackicons';
-export const Introduction = () => {
-  let message = "Demonstrating an acute understanding of modern user behavior, the individual has adeptly implemented responsive web design principles across their projects. By ensuring that their creations adapt seamlessly to diverse screen sizes and devices, they have effectively catered to the preferences of a wide-ranging audience, leading to enhanced user engagement and satisfaction.";
+import { RobotLogo } from "../DevelopersPortfolio/techstackicons";
+import useTextAnimation from "../shared/Hooks/useTextAnimation";
+interface IComponentProps {
+  animatedMessage:string,
+}
+export const Introduction = ({animatedMessage} : IComponentProps) => {
+
   const {animatedText} = useTextAnimation({
-    message,
+    message:animatedMessage,
   })
   return (
     <div className='border-black/10 dark:border-gray-900/50 dark:bg-[#444654] w-screen'>

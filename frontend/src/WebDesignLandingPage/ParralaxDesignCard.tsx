@@ -1,8 +1,7 @@
-import {Modal} from './Modal'
+import {Modal} from '../ReusedStyleComponents/Modal'
 import { useState } from 'react';
 export const ParralaxDesignCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
 
   const handleClick = () => {
     setIsModalOpen(true)
