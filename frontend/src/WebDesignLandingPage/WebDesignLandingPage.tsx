@@ -1,16 +1,21 @@
 import { Introduction } from "./Introduction";
-
+import { ParralaxDesignCard } from "./ParralaxDesignCard";
 export const WebDesignLandingPage = () => {
+
   return (
     <div className="flex flex-col flex-1  w-screen justify-start items-center">
       <Introduction/>
-      <div className="WebDesignLandingPage-Cards flex flex-row grow">
-        <div className="bg-red-500"></div>
-        <div className="bg-purple-500"></div>
-        <div className="bg-blue-500"></div>
-        
-        <div className="bg-green-500"></div>
+      
+      <div 
+        className="WebDesignLandingPage-LA-Mountain-Card flex flex-1 w-full flex-row justify-evenly mt-4"
+      >
+        <ParralaxDesignCard/>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
+
     </div>
   )
 }

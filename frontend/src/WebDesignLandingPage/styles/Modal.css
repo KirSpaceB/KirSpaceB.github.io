@@ -1,0 +1,55 @@
+@keyframes modalOpen {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotateX(-90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotateX(0deg);
+  }
+}
+
+@keyframes modalClose {
+  from {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+}
+
+
+#modal_container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotateX(0deg);
+  transform-origin: top center;
+  background-color: #444654;
+  width: auto;
+  height: auto;
+  z-index: 100;
+  /* Animation */
+  animation: modalOpen 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#modal_container.closing {
+  animation: modalClose 0.3s forwards;
+}
+
+#modal_close_button {
+  width: auto;
+  height: auto;
+  margin-top:0.5rem;
+}
+
+#modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* This could be any color or opacity you like */
+  filter: blur(20px); /* Increase this value for a stronger blur */
+  z-index: 99;
+}
