@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Introduction } from "./Introduction";
-import { ButtonModal } from "./ButtonModal";
+import { Modal } from "./Modal";
 export const WebDesignLandingPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -21,7 +21,7 @@ export const WebDesignLandingPage = () => {
           </div>
         </button>
       </div>
-      {isModalOpen && <ButtonModal onClose={handleClose}/>}
+      {isModalOpen && <Modal onClose={handleClose}/>}
     </div>
   )
 }
