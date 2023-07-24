@@ -42,7 +42,9 @@ export const Modal = ({onClose}: ButtonModalProps) => {
         </button>
         <video src={ParalaxVideoDemo} className='w-[32rem] h-auto' controls></video>
         <div className='flex flex-row space-x-4 justify-center items-center mt-4'>
-          <ReusedButton textToDisplay='Source Code' icon={GitHubIcon} link='https://github.com/KirSpaceB/LA_Mountains_Parallax_Design'/>
+          <ReusedButton textToDisplay='Source Code' icon={GitHubIcon} 
+          link='https://github.com/KirSpaceB/LA_Mountains_Parallax_Design/blob/main/HTMLProject/index.html'
+          />
           <ReusedButton textToDisplay='Live Demo'/>
         </div>
 
