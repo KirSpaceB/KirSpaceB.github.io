@@ -7,9 +7,9 @@ import { CloseModal } from './CloseModal';
 
 type ButtonModalProps = {
   onClose: () => void,
-  displayedVideo:string,
-  gitHubLink:string,
-  projectDescription:string,
+  displayedVideo?:string,
+  gitHubLink?:string,
+  projectDescription?:string,
 };
 
 export const Modal = (
