@@ -49,7 +49,16 @@ export const Modal = (
         <button id='modal_close_button' onClick={handleClose}>
           <CloseModal/>
         </button>
-        <video src={displayedVideo} className='w-[32rem] h-auto' controls></video>
+
+        <div className="div-container-for-modal-video-tag flex justify-center items-center">
+          <video 
+            src={displayedVideo}
+            className='w-[32rem] h-auto inline-block m-0 p-0'
+            controls
+            >
+          </video>
+        </div>
+
         <div className='flex flex-row space-x-4 justify-center items-center mt-4'>
           <ReusedButton textToDisplay='Source Code' icon={GitHubIcon} 
           link={gitHubLink}
