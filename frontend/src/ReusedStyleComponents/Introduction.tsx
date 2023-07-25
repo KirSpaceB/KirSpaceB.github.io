@@ -1,16 +1,15 @@
 import { RobotLogo } from "../DevelopersPortfolio/techstackicons";
 import useTextAnimation from "../shared/Hooks/useTextAnimation";
-import {FullStackLandingPageContext} from "../FullStackLandingPage/FullStackLandingPageContext"
-import { useContext } from "react";
+
 interface IComponentProps {
   animatedMessage:string,
+  onAnimationComplete?: () => void
 }
-export const Introduction = ({animatedMessage} : IComponentProps) => {
-  const {setIsIntroductionFinished} = useContext(FullStackLandingPageContext)
+export const Introduction = ({animatedMessage, onAnimationComplete} : IComponentProps) => {
 
   const {animatedText} = useTextAnimation({
     message:animatedMessage,
-    callbackFnForDestructContext: () => setIsIntroductionFinished(true),
+    callbackFnForDestructContext: () => onAnimationComplete?.(),
     speed:10
   })
   return (

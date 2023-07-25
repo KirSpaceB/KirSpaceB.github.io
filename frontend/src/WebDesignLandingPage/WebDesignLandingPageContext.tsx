@@ -1,11 +1,11 @@
 import { Dispatch, ReactNode, SetStateAction, createContext, useState } from "react"
 
-interface IFullStackLandingPageContext {
+interface IWebDesingLandingPage {
   isIntroductionFinished:boolean,
   setIsIntroductionFinished:Dispatch<SetStateAction<boolean>>
 }
 
-export const FullStackLandingPageContext = createContext<IFullStackLandingPageContext>({
+export const WebDesingLandingPageContext = createContext<IWebDesingLandingPage>({
   isIntroductionFinished:false,
   setIsIntroductionFinished: () => {}
 })
@@ -13,15 +13,15 @@ interface IFullStackLandingPageProviderArgs {
   children:ReactNode
 }
 
-export const FullStackLandingPageContextProvider = ({children} : IFullStackLandingPageProviderArgs) => {
+export const WebDesingLandingPageProvider = ({children} : IFullStackLandingPageProviderArgs) => {
   const [isIntroductionFinished, setIsIntroductionFinished] = useState(false);
 
   return (
-    <FullStackLandingPageContext.Provider value={{
+    <WebDesingLandingPageContext.Provider value={{
         isIntroductionFinished, 
         setIsIntroductionFinished
       }}>
       {children}
-    </FullStackLandingPageContext.Provider>
+    </WebDesingLandingPageContext.Provider>
   )
 }

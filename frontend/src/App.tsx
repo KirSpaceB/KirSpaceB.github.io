@@ -4,21 +4,24 @@ import { MainPageContextProvider } from "./MainPage/context/MainPageContext";
 import { WebDesignSectionContextProvider } from "./Sidebar/Context/WebDesignSectionContext/WebDesignSectionContext";
 import { FullStackSectionContextProvider } from "./Sidebar/Context/FullStackSection/FullStackSection";
 import { FullStackLandingPageContextProvider } from "./FullStackLandingPage/FullStackLandingPageContext";
+import { WebDesingLandingPageProvider } from "./WebDesignLandingPage/WebDesignLandingPageContext";
 
 const App = () => {
   return (
-    <FullStackLandingPageContextProvider>
-      <FullStackSectionContextProvider>
-        <WebDesignSectionContextProvider>
-          <MainPageContextProvider>
-            <div className="flex overflow-x-hidden w-screen h-screen">
-              <Sidebar/>
-              <MainPage/>
-            </div>
-          </MainPageContextProvider>
-        </WebDesignSectionContextProvider>
-      </FullStackSectionContextProvider>
-    </FullStackLandingPageContextProvider>
+    <WebDesingLandingPageProvider>
+      <FullStackLandingPageContextProvider>
+        <FullStackSectionContextProvider>
+          <WebDesignSectionContextProvider>
+            <MainPageContextProvider>
+              <div className="flex overflow-x-hidden w-screen h-screen">
+                <Sidebar/>
+                <MainPage/>
+              </div>
+            </MainPageContextProvider>
+          </WebDesignSectionContextProvider>
+        </FullStackSectionContextProvider>
+      </FullStackLandingPageContextProvider>
+    </WebDesingLandingPageProvider>
   )
 }
 

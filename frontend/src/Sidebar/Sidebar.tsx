@@ -13,8 +13,7 @@ export const Sidebar = () => {
       <div className="h-full w-[260px]">
         <div className="flex h-full min-h-0 flex-col">
           <nav className="flex h-full w-full flex-col p-2" aria-label="Chat History">
-            <NewChat/>
-            
+            <NewChat/> 
             <div className="flex-col flex-1 transition-opacity duration-500 overflow-y-auto ">
               <div className="flex flex-col gap-2 pb-2 text-gray-100 text-sm">
                 <div>
