@@ -3,13 +3,15 @@ import useTextAnimation from "../shared/Hooks/useTextAnimation";
 
 interface IComponentProps {
   animatedMessage:string,
-  onAnimationComplete?: () => void
+  onAnimationComplete?: () => void,
+  turnOffAnimationInDifferentPage?:() => void,
 }
-export const Introduction = ({animatedMessage, onAnimationComplete} : IComponentProps) => {
+export const Introduction = ({animatedMessage, onAnimationComplete, turnOffAnimationInDifferentPage} : IComponentProps) => {
 
   const {animatedText} = useTextAnimation({
     message:animatedMessage,
     callbackFnForDestructContext: () => onAnimationComplete?.(),
+    callBackFnThatOnlyReceivesFalse: () => turnOffAnimationInDifferentPage?.(),
     speed:10
   })
   return (

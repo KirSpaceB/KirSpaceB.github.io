@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 interface IUseTextAnimationArgs {
   message:string,
   speed?:number,
-  callbackFnForDestructContext?: () => void
+  callbackFnForDestructContext?: () => void,
+  callBackFnThatOnlyReceivesFalse?: () => void,
 }
 
 interface IUseTextAnimationReturnType {
@@ -16,7 +17,8 @@ interface IUseTextAnimationReturnType {
 export default function useTextAnimation({
   message,
   speed = 30,
-  callbackFnForDestructContext
+  callbackFnForDestructContext,
+  callBackFnThatOnlyReceivesFalse,
   }: IUseTextAnimationArgs): IUseTextAnimationReturnType {
     
   const [animatedText, setAnimatedText] = useState('');
@@ -29,7 +31,12 @@ export default function useTextAnimation({
           clearInterval(timer);
           // We need to do this in Order to prevent violating the React Hooks rule of having side effects
           setTimeout(() => {
-            if(callbackFnForDestructContext) callbackFnForDestructContext();
+            if(callbackFnForDestructContext) {
+              callbackFnForDestructContext();
+            }
+            if(callBackFnThatOnlyReceivesFalse) {
+              callBackFnThatOnlyReceivesFalse()
+            }
           }, 0)
           return prevText
         }

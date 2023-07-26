@@ -2,12 +2,21 @@ import { Introduction } from "../ReusedStyleComponents/Introduction";
 import { CardWithModal } from "../ReusedStyleComponents/CardWithModal";
 import ParrallaxVideoDemo from "../../public/Parallax Design Video Demo.mp4"
 import { WebDesingLandingPageContext } from "./WebDesignLandingPageContext";
-import { useContext } from "react";
+import { FullStackLandingPageContext } from "../FullStackLandingPage/FullStackLandingPageContext";
+import { useContext, useEffect } from "react";
+
 export const WebDesignLandingPage = () => {
     
   const {isIntroductionFinished,setIsIntroductionFinished} = useContext(WebDesingLandingPageContext)
+  const {setIsFsLpIntroductionFinished} = useContext(FullStackLandingPageContext)
 
-  let message = "Demonstrating an acute understanding of modern user behavior, the individual has adeptly implemented responsive web design principles across their projects. By ensuring that their creations adapt seamlessly to diverse screen sizes and devices, they have effectively catered to the preferences of a wide-ranging audience, leading to enhanced user engagement and satisfaction.";
+  useEffect(() => {
+    if (isIntroductionFinished) {
+      setIsFsLpIntroductionFinished(false)
+    }
+  }, [isIntroductionFinished])
+
+  let message = "DteseaseaseasDteseaseaseasDteseaseaseasDteseaseaseas";
   let cardTitleArg = 'L.A. Mountains Parrallax Design'
 
   let gitHubLink = 'https://github.com/KirSpaceB/LA_Mountains_Parallax_Design/blob/main/HTMLProject/index.html'
@@ -20,7 +29,7 @@ export const WebDesignLandingPage = () => {
         animatedMessage={message} 
         onAnimationComplete={() => setIsIntroductionFinished(true)}
       />
-      {isIntroductionFinished && 
+      {isIntroductionFinished &&
         <div 
         className="WebDesignLandingPage-LA-Mountain-Card flex flex-1 w-full flex-row justify-evenly mt-4"
         >
@@ -33,7 +42,7 @@ export const WebDesignLandingPage = () => {
           <div></div>
           <div></div>
           <div></div>
-        </div>      
+        </div>
       }
 
 

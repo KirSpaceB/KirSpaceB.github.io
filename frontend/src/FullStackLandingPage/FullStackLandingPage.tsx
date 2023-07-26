@@ -3,8 +3,9 @@ import { Introduction } from "../ReusedStyleComponents/Introduction"
 import GisProjectVid from '../../public/Gismap.mp4';
 import PersonalInvestHelperVid from '../../public/Personal-finance-page.mp4'
 import MazeSolverVid from '../../public/MazeSolverVideo.mp4'
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { FullStackLandingPageContext } from "./FullStackLandingPageContext";
+import { WebDesingLandingPageContext } from "../WebDesignLandingPage/WebDesignLandingPageContext";
 
 
 export const FullStackLandingPage = () => {
@@ -20,14 +21,25 @@ export const FullStackLandingPage = () => {
   let mazeSolverGhLink = 'https://github.com/KirSpaceB/MazeSolver'
   let mazeSolverDesc = 'Interactive application that lets users draw a maze with obstacles, and solve with algorithms such as BFS and DFS.'
 
-  const {isIntroductionFinished, setIsIntroductionFinished} = useContext(FullStackLandingPageContext)
+  const {isFsLpIntroductionFinished, setIsFsLpIntroductionFinished} = useContext(FullStackLandingPageContext)
+  const {isIntroductionFinished,setIsIntroductionFinished} = useContext(WebDesingLandingPageContext)
+  useEffect(() => {
+    console.log('is useffect being read')
+    console.log("is the lpintroduction finisheded?", isFsLpIntroductionFinished)
+    if(isFsLpIntroductionFinished) {
+      console.log("is the lpintroduction finisheded?", isFsLpIntroductionFinished)
+
+      setIsIntroductionFinished(false)
+      console.log(isIntroductionFinished)
+    }
+  },[isFsLpIntroductionFinished])
 
 
   return (
     <div className="flex flex-col flex-1  w-screen justify-start items-center">
-       <Introduction animatedMessage="Let me present a comprehensive overview of his comprehensive full-stack development projects, wherein he has proficiently utilized Python's Flask framework. Not just limiting himself to this, he has also integrated continuous integration and continuous delivery pipelines (CI/CD), ensuring a streamlined, automatic, and reliable process for frequent and error-free deployments of the applications. Moreover, he has employed MySQL as his choice of relational database management system for these projects, enabling efficient data handling, storage, and retrieval. His projects are a testament to his diverse skill set, bringing together various aspects of modern web development in a cohesive manner." onAnimationComplete={() => setIsIntroductionFinished(true)}/>
+       <Introduction animatedMessage="test1test1test1test1test1test1test1test1" onAnimationComplete={() => setIsFsLpIntroductionFinished(true)}/>
       
-      {isIntroductionFinished && 
+      {isFsLpIntroductionFinished && 
         <div 
           className="WebDesignLandingPage-LA-Mountain-Card flex flex-1 w-full flex-row justify-evenly mt-4"
         >
