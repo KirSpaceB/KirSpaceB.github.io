@@ -1,19 +1,35 @@
 import React, { ReactNode, useState } from "react";
 interface ILandingPageContext {
-  isRendered:boolean;
-  setIsRendered: React.Dispatch<React.SetStateAction<boolean>>;
+  isLandingPageNameIntroductionFinished:boolean;
+  setIsLandingPageNameIntroductionFinished: React.Dispatch<React.SetStateAction<boolean>>;
 };
 interface IChildrenForContext {
   children: ReactNode;
 };
 
-export const LandingPageNameContext = React.createContext<ILandingPageContext>({isRendered:false, setIsRendered: () => undefined});
+export const LandingPageNameContext = React.createContext<ILandingPageContext>
+(
+  {
+    isLandingPageNameIntroductionFinished:false,
+    setIsLandingPageNameIntroductionFinished: () => undefined
+  }
+);
 
 export const LandingPageNameContextProvider = ({children} : IChildrenForContext) => {
-  const [isRendered, setIsRendered] = useState(false);
+  const
+  [
+    isLandingPageNameIntroductionFinished,
+    setIsLandingPageNameIntroductionFinished
+  ] = useState(false);
 
   return (
-    <LandingPageNameContext.Provider value={{isRendered, setIsRendered}}>
+    <LandingPageNameContext.Provider value=
+    {
+      {
+        isLandingPageNameIntroductionFinished,
+        setIsLandingPageNameIntroductionFinished
+      }
+    }>
       {children}
     </LandingPageNameContext.Provider>
   )

@@ -1,5 +1,4 @@
-import RobotLogo from "../../shared/images/robot-svgrepo-com.svg";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { TechStackPage } from "../TechStackPage";
 import { LandingPageName } from "./LandingPageName";
 import { LandingPageAgeDesc } from "./LandingPageAgeDesc";
@@ -16,11 +15,11 @@ export const LandingPage = () => {
 
   let introduction = "Here is an introduction of who he is and some of his hobbies.";
 
-  const [isTextComplete, setIsTextComplete] = useState(false);
+  const [isIntroductionAnimationDone, setIsIntroductionAnimationDone] = useState(false);
 
   const {animatedText} = useTextAnimation({
     message:introduction,
-    callbackFnForDestructContext: () => setIsTextComplete(true)
+    callbackFnForDestructContext: () => setIsIntroductionAnimationDone(true)
   })
 
   return (
@@ -39,7 +38,7 @@ export const LandingPage = () => {
 
               <div className="flex flex-col items-center">
                 <div>
-                  <LandingPageName isRendered={isTextComplete}/>
+                  <LandingPageName isLandingPageIntroductionDone={isIntroductionAnimationDone}/>
                   <LandingPageAgeDesc/>
                 </div>
 
