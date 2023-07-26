@@ -1,7 +1,5 @@
 import { NewChat } from "./SidebarComponents/NewChat";
-import { TodaySection } from "./SidebarComponents/TodaySection";
-import { YesterdaySection } from "./SidebarComponents/YesterdaySection";
-import { PastThirtyDaysSection } from "./SidebarComponents/PastThirtyDaysSection";
+import { SocialsSection } from "./SidebarComponents/SocialsSection";
 import { Footer } from "./SidebarComponents/Footer";
 import { Projects } from "./ProjectSection/Projects";
 
@@ -19,9 +17,7 @@ export const Sidebar = () => {
                 <div>
                   <span>
                     <Projects/>
-                    <TodaySection/>
-                    <YesterdaySection/>
-                    <PastThirtyDaysSection/>
+                    <SocialsSection/>
                   </span>
                 </div>
               </div>

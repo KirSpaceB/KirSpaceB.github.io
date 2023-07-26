@@ -1,4 +1,4 @@
-import { RobotLogo } from "../DevelopersPortfolio/techstackicons";
+import { RobotLogo } from "../MainLandingPage/techstackicons";
 import useTextAnimation from "../shared/Hooks/useTextAnimation";
 
 interface IComponentProps {

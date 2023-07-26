@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import './styles/Modal.css';
 
 import { ReusedButton } from './ReusedButton';
-import { GitHubIcon } from '../DevelopersPortfolio/techstackicons';
+import { GitHubIcon } from '../MainLandingPage/techstackicons';
 import { CloseModal } from './CloseModal';
 
 type ButtonModalProps = {
