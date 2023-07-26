@@ -9,12 +9,12 @@ export const LandingPageAgeDesc = () => {
   const [animateTextHobbies, setAnimateTextHobbies] = useState("");
   const [isAnimateGreetingDone, setIsAnimateGreetingDone] = useState(false);
 
-  const {isRendered} = useContext(LandingPageNameContext);
+  const {isLandingPageNameIntroductionFinished} = useContext(LandingPageNameContext);
   const {setIsGreetingFinished} = useContext(AgeDesContext);
 
   // Only trigger this useEffect hook if componentOne is done animating!
   useEffect(() => {
-    if(isRendered) {
+    if(isLandingPageNameIntroductionFinished) {
       const timer = setInterval(() => {
         setAnimateTextGreeting((prevChar) => {
           if(prevChar.length === greeting.length) {
@@ -27,7 +27,7 @@ export const LandingPageAgeDesc = () => {
       }, 20);
       return () => clearInterval(timer);
     }
-  }, [isRendered]);
+  }, [isLandingPageNameIntroductionFinished]);
 
   useEffect(() => {
     if(isAnimateGreetingDone) {
