@@ -6,60 +6,48 @@ import MazeSolverVid from '../../public/MazeSolverVideo.mp4'
 import { useContext, useEffect } from "react";
 import { FullStackLandingPageContext } from "./FullStackLandingPageContext";
 import { WebDesingLandingPageContext } from "../WebDesignLandingPage/WebDesignLandingPageContext";
-
+import { projects } from "./FsLpProjects";
 
 export const FullStackLandingPage = () => {
-  let gisCardTitle = 'GIS-Data-Visualizer'
-  let gisGitHubLink = 'https://github.com/KirSpaceB/GIS-Data-Visualizer'
-  let gisProjectDesc = 'Web Application that visualizes population and county employment level on an interactive 2D map of the world.'
-
-  let investmentHelperCardTitle = 'Personal-Investment-Helper'
-  let investmentHelperGitHubLink = 'https://github.com/KirSpaceB/Personal-Investment-Helper';
-  let projDesc = 'Dashboard that links multiple financial Web APIs together leveraged for investment decisions.'
-  
-  let mazeSolverTitle = 'Maze Solver'
-  let mazeSolverGhLink = 'https://github.com/KirSpaceB/MazeSolver'
-  let mazeSolverDesc = 'Interactive application that lets users draw a maze with obstacles, and solve with algorithms such as BFS and DFS.'
+  let message = 'Embark on a journey through my full-stack web portfolio, where I have adeptly harnessed the potential of Flask and Express for back-end wizardry. Behold the seamless integration of MySQL and MongoDB databases, alongside a robust CI/CD pipeline with Docker, ensuring a transformative and efficient deployment of digital experiences that push the boundaries of innovation.'
 
   const {isFsLpIntroductionFinished, setIsFsLpIntroductionFinished} = useContext(FullStackLandingPageContext)
-  const {isIntroductionFinished,setIsIntroductionFinished} = useContext(WebDesingLandingPageContext)
-  useEffect(() => {
-    console.log('is useffect being read')
-    console.log("is the lpintroduction finisheded?", isFsLpIntroductionFinished)
-    if(isFsLpIntroductionFinished) {
-      console.log("is the lpintroduction finisheded?", isFsLpIntroductionFinished)
+  const {setIsIntroductionFinished} = useContext(WebDesingLandingPageContext)
 
+  useEffect(() => {
+    if(isFsLpIntroductionFinished) {
       setIsIntroductionFinished(false)
-      console.log(isIntroductionFinished)
     }
   },[isFsLpIntroductionFinished])
 
-
   return (
     <div className="flex flex-col flex-1  w-screen justify-start items-center">
-       <Introduction animatedMessage="test1test1test1test1test1test1test1test1" onAnimationComplete={() => setIsFsLpIntroductionFinished(true)}/>
+       <Introduction
+          animatedMessage={message}
+          onAnimationComplete={() => setIsFsLpIntroductionFinished(true)}
+        />
       
       {isFsLpIntroductionFinished && 
         <div 
           className="WebDesignLandingPage-LA-Mountain-Card flex flex-1 w-full flex-row justify-evenly mt-4"
         >
           <CardWithModal 
-            cardTitle={gisCardTitle}
+            cardTitle={projects[0].title}
             videoPassedToModal={GisProjectVid}
-            gitHubLinkPassedToModal={gisGitHubLink}
-            projectDiscriptionPassedToModal={gisProjectDesc}
+            gitHubLinkPassedToModal={projects[0].githubLink}
+            projectDiscriptionPassedToModal={projects[0].projectDesc}
           />
           <CardWithModal 
-            cardTitle={investmentHelperCardTitle}
+            cardTitle={projects[1].title}
             videoPassedToModal={PersonalInvestHelperVid}
-            gitHubLinkPassedToModal={investmentHelperGitHubLink}
-            projectDiscriptionPassedToModal={projDesc}
+            gitHubLinkPassedToModal={projects[1].githubLink}
+            projectDiscriptionPassedToModal={projects[1].projectDesc}
           />
           <CardWithModal
-            cardTitle={mazeSolverTitle}
+            cardTitle={projects[2].title}
             videoPassedToModal={MazeSolverVid}
-            gitHubLinkPassedToModal={mazeSolverGhLink}
-            projectDiscriptionPassedToModal={mazeSolverDesc}
+            gitHubLinkPassedToModal={projects[2].githubLink}
+            projectDiscriptionPassedToModal={projects[2].projectDesc}
           />
           <div className="ghost-div"></div>
           <div className="ghost-div"></div>

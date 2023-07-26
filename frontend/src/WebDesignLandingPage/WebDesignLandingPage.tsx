@@ -4,6 +4,7 @@ import ParrallaxVideoDemo from "../../public/Parallax Design Video Demo.mp4"
 import { WebDesingLandingPageContext } from "./WebDesignLandingPageContext";
 import { FullStackLandingPageContext } from "../FullStackLandingPage/FullStackLandingPageContext";
 import { useContext, useEffect } from "react";
+import { projects } from "./wdlpProjects";
 
 export const WebDesignLandingPage = () => {
     
@@ -16,12 +17,7 @@ export const WebDesignLandingPage = () => {
     }
   }, [isIntroductionFinished])
 
-  let message = "DteseaseaseasDteseaseaseasDteseaseaseasDteseaseaseas";
-  let cardTitleArg = 'L.A. Mountains Parrallax Design'
-
-  let gitHubLink = 'https://github.com/KirSpaceB/LA_Mountains_Parallax_Design/blob/main/HTMLProject/index.html'
-  
-  let projDescription = 'If Live demo is currently unavaible the video demonstrates the app';
+  let message = "Behold the captivating web design section, where a myriad of styles are showcased by our expert presenter. With impressive mastery, they reveal a diverse range of cutting-edge techniques and trends, illuminating the limitless possibilities within the art of web design.";
     
   return (
     <div className="flex flex-col flex-1  w-screen justify-start items-center">
@@ -34,9 +30,10 @@ export const WebDesignLandingPage = () => {
         className="WebDesignLandingPage-LA-Mountain-Card flex flex-1 w-full flex-row justify-evenly mt-4"
         >
           <CardWithModal 
-          cardTitle={cardTitleArg} 
-          videoPassedToModal={ParrallaxVideoDemo} gitHubLinkPassedToModal={gitHubLink}
-          projectDiscriptionPassedToModal={projDescription}
+            cardTitle={projects[0].cardTitleArg} 
+            videoPassedToModal={ParrallaxVideoDemo}
+            gitHubLinkPassedToModal={projects[0].gitHubLink}
+            projectDiscriptionPassedToModal={projects[0].projDescription}
           />
           <div></div>
           <div></div>
