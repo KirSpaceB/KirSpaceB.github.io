@@ -7,9 +7,9 @@ import { useContext, useEffect } from "react";
 import { FullStackLandingPageContext } from "./FullStackLandingPageContext";
 import { WebDesingLandingPageContext } from "../WebDesignLandingPage/WebDesignLandingPageContext";
 import { projects } from "./FsLpProjects";
+import { FullStackLandingPageAnimatedMessages } from "./FsLpData";
 
 export const FullStackLandingPage = () => {
-  let message = 'Embark on a journey through my full-stack web portfolio, where I have adeptly harnessed the potential of Flask and Express for back-end wizardry. Behold the seamless integration of MySQL and MongoDB databases, alongside a robust CI/CD pipeline with Docker, ensuring a transformative and efficient deployment of digital experiences that push the boundaries of innovation.'
 
   const {isFsLpIntroductionFinished, setIsFsLpIntroductionFinished} = useContext(FullStackLandingPageContext)
   const {setIsIntroductionFinished} = useContext(WebDesingLandingPageContext)
@@ -23,7 +23,7 @@ export const FullStackLandingPage = () => {
   return (
     <div className="flex flex-col flex-1  w-screen justify-start items-center">
        <Introduction
-          animatedMessage={message}
+          animatedMessage={FullStackLandingPageAnimatedMessages[0].message}
           onAnimationComplete={() => setIsFsLpIntroductionFinished(true)}
         />
       

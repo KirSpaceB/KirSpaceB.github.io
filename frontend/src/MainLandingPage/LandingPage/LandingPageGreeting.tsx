@@ -4,7 +4,7 @@ import { TechStackContext } from "./context/TechStackContext";
 import MeWithLongHair  from "../../shared/images/Screenshot 2023-04-26 at 2.21.33 PM.png"
 import { ContinueGeneratingArrow } from "./LandingPageSvgs/ContinueGeneratingArrow";
 import { SvgComponent } from "../../shared/SvgComponent";
-import { LandingPageGreetingMessages } from "./LandingPageData/animatedMessages";
+import { LandingPageGreetingMessages } from "../MainPageData/animatedMessages";
 export const LandingPageGreeting = () => {
   const {isGreetingFinished} = useContext(AgeDesContext);
   const {setIsAgeLocationFinished} = useContext(TechStackContext);

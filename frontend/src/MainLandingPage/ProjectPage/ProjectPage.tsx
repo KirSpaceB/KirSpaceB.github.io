@@ -1,21 +1,22 @@
 import { useState, useEffect, useContext } from "react";
 import { ProjectPageContext } from "../LandingPage/context/ProjectPageContext";
 import { RobotLogo } from "../techstackicons";
+import { ProjectPageMessages } from "../MainPageData/animatedMessages";
 
 export const ProjectPage = () => {
   const {isTechStackFinished} = useContext(ProjectPageContext);
-  let animatedText = "If you're interested in delving deeper into the detailed aspects of his various projects, you'll find that we've conveniently placed them within reach. They're readily accessible in the sidebar section of the webpage. We encourage you to explore this section as it is abundantly populated with the fruits of his technical prowess. There you will find a meticulous catalog of his work that showcases the breadth and depth of his skills. So, go ahead and immerse yourself in the remarkable projects on display. You might be pleasantly surprised by the innovation and technical acuity that you'll discover there. Happy exploring!";
+
   const [animateText, setAnimateText] = useState("");
 
   useEffect(() => {
     if(isTechStackFinished) {
       const timer = setInterval(() => {
         setAnimateText((prevChar) => {
-          if(prevChar.length === animatedText.length) {
+          if(prevChar.length === ProjectPageMessages[0].animatedText.length) {
             clearInterval(timer);
             return prevChar
           };
-          return prevChar + animatedText.charAt(prevChar.length);
+          return prevChar + ProjectPageMessages[0].animatedText.charAt(prevChar.length);
         });
       }, 20)
       return () => clearInterval(timer)
