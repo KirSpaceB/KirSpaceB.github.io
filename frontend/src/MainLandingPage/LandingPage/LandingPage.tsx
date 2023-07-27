@@ -38,7 +38,7 @@ export const LandingPage = () => {
 
               <div className="flex flex-col items-center">
                 <div>
-                  <LandingPageName isLandingPageIntroductionDone={isIntroductionAnimationDone}/>
+                  <LandingPageName isLandingPageNameFinished={isIntroductionAnimationDone}/>
                   <LandingPageAgeDesc/>
                 </div>
 

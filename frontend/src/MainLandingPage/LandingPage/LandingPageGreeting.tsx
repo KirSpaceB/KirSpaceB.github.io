@@ -4,6 +4,7 @@ import { TechStackContext } from "./context/TechStackContext";
 import MeWithLongHair  from "../../shared/images/Screenshot 2023-04-26 at 2.21.33 PM.png"
 import { ContinueGeneratingArrow } from "./LandingPageSvgs/ContinueGeneratingArrow";
 import { SvgComponent } from "../../shared/SvgComponent";
+import { LandingPageGreetingMessages } from "./LandingPageData/animatedMessages";
 export const LandingPageGreeting = () => {
   const {isGreetingFinished} = useContext(AgeDesContext);
   const {setIsAgeLocationFinished} = useContext(TechStackContext);
@@ -12,20 +13,20 @@ export const LandingPageGreeting = () => {
   const [isAnimatedTextFinished, setIsAnimatedTextFinished] = useState(false);
   const [isAhoyThereDone, setIsAhoyThereDone] = useState(false);
   const [makeButtonDisappear, setMakeButtonDisappear] = useState(true);
-  let ahoyThere = "While I'm an avid sports enthusiast, particularly enjoying basketball, football, and tennis, my true passion and where I invest the majority of my time is in the realm of software development. Balancing physical activities with cerebral challenges, I continue to expand my technical skillset, always staying at the forefront of the rapidly evolving tech industry. This unique blend of physical pursuits and intellectual dedication is the driving force behind my personal and professional growth."
 
 
+  // Another edge case what if theres two animations that need to be set to true?
   useEffect(() => {
     if(isGreetingFinished) {
       const timer = setInterval(() => {
         setAhoyThereAnimation((prevChar) => {
-          if(prevChar.length === ahoyThere.length) {
+          if(prevChar.length === LandingPageGreetingMessages[0].ahoyThere.length) {
             clearInterval(timer);
             setIsAnimatedTextFinished(true)
             setIsAhoyThereDone(true)
             return prevChar;
           }
-          return prevChar + ahoyThere.charAt(prevChar.length);
+          return prevChar + LandingPageGreetingMessages[0].ahoyThere.charAt(prevChar.length);
         });
       }, 10);
       return () => clearInterval(timer);
